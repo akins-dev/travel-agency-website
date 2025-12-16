@@ -4,6 +4,7 @@ import CtaBanner from "@/components/pages/home/CTABanner";
 import DestinationsSection from "@/components/pages/home/Destinations";
 import HeroSection from "@/components/pages/home/Hero";
 import MissionSection from "@/components/pages/home/Mission";
+import ReviewsSection from "@/components/pages/home/Reviews";
 import ServicesSection from "@/components/pages/home/Services";
 import TripOptions from "@/components/pages/home/TripOptions";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <BenefitsSection />
       <CtaBanner />
       <TripOptions />
+      <ReviewsSection />
     </main>
   );
 }
