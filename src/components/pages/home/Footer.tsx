@@ -14,11 +14,11 @@ export default function Footer() {
       {/* PART 1: PRE-FOOTER (Contact)    */}
       {/* ------------------------------- */}
       <div className="bg-[#E2DFCE] px-4 md:px-8 py-20">
-        <div className="max-w-[1000px] mx-auto text-center space-y-16">
+        <div className="max-w-250 mx-auto text-center space-y-16">
           {/* Header */}
           <div className="space-y-4">
             <span className="text-xs font-bold uppercase tracking-widest opacity-60 flex items-center justify-center gap-2">
-              <span className="w-2 h-[1px] bg-current" /> GET IN TOUCH
+              <span className="w-2 h-px bg-current" /> GET IN TOUCH
             </span>
             <h2 className="text-3xl md:text-5xl font-medium tracking-tight">
               Have a question or need <br /> assistance?
@@ -56,7 +56,7 @@ export default function Footer() {
               <p className="text-xs opacity-60 -mt-2">
                 Submit your request online
               </p>
-              <button className="bg-[#2B3D25] text-[#EAE8DF] px-6 py-2.5 rounded-[4px] text-xs font-bold uppercase tracking-wide hover:opacity-90 transition-opacity mt-1">
+              <button className="bg-[#2B3D25] text-[#EAE8DF] px-6 py-2.5 rounded-sm text-xs font-bold uppercase tracking-wide hover:opacity-90 transition-opacity mt-1">
                 Leave Request
               </button>
             </div>
