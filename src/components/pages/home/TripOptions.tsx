@@ -64,7 +64,7 @@ export default function TripOptions() {
               className={`text-left p-6 rounded-xl transition-all duration-300 border border-transparent ${
                 activeTab === "private"
                   ? "bg-[#2B3D25] text-[#EAE8DF] shadow-lg"
-                  : "bg-[#E5E3DA] text-[#2B3D25] hover:bg-[#dedcd3] hover:border-[#2B3D25]/10"
+                  : "bg-[#E6E3D2] text-[#2B3D25] hover:bg-[#E6E3D2]/80 hover:border-[#2B3D25]/10"
               }`}
             >
               <span className="block text-lg font-medium mb-1">
