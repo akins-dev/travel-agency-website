@@ -2,6 +2,7 @@ import AboutSection from "@/components/pages/home/About";
 import BenefitsSection from "@/components/pages/home/Benefits";
 import CtaBanner from "@/components/pages/home/CTABanner";
 import DestinationsSection from "@/components/pages/home/Destinations";
+import FaqSection from "@/components/pages/home/FAQ";
 import HeroSection from "@/components/pages/home/Hero";
 import MissionSection from "@/components/pages/home/Mission";
 import ReviewsSection from "@/components/pages/home/Reviews";
@@ -20,6 +21,7 @@ export default function Home() {
       <CtaBanner />
       <TripOptions />
       <ReviewsSection />
+      <FaqSection />
     </main>
   );
 }
