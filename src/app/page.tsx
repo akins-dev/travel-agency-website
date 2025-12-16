@@ -5,6 +5,7 @@ import DestinationsSection from "@/components/pages/home/Destinations";
 import HeroSection from "@/components/pages/home/Hero";
 import MissionSection from "@/components/pages/home/Mission";
 import ServicesSection from "@/components/pages/home/Services";
+import TripOptions from "@/components/pages/home/TripOptions";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <DestinationsSection />
       <BenefitsSection />
       <CtaBanner />
+      <TripOptions />
     </main>
   );
 }
