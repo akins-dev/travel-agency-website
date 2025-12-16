@@ -40,7 +40,7 @@ export default function TripOptions() {
 
   return (
     <section className="bg-[#EAE8DF] w-full px-4 md:px-8 py-20 text-[#2B3D25] font-sans">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-300 mx-auto">
         {/* --- HEADER --- */}
         <div className="text-center space-y-4 mb-16">
           <div className="flex items-center justify-center gap-2 opacity-60">
@@ -101,7 +101,7 @@ export default function TripOptions() {
           </div>
 
           {/* RIGHT: Detail Card */}
-          <div className="lg:col-span-7 bg-[#F4F3EF] rounded-[2rem] p-8 md:p-12 shadow-sm">
+          <div className="lg:col-span-7 bg-[#F4F3EF] rounded-4xl p-8 md:p-12 shadow-sm">
             <h3 className="text-2xl font-medium mb-4">
               {options[activeTab].title}
             </h3>
