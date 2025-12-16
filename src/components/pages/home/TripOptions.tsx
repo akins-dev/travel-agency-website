@@ -84,7 +84,7 @@ export default function TripOptions() {
               className={`text-left p-6 rounded-xl transition-all duration-300 border border-transparent ${
                 activeTab === "scheduled"
                   ? "bg-[#2B3D25] text-[#EAE8DF] shadow-lg"
-                  : "bg-[#E5E3DA] text-[#2B3D25] hover:bg-[#dedcd3] hover:border-[#2B3D25]/10"
+                  : "bg-[#E6E3D2] text-[#2B3D25] hover:bg-[#E6E3D2]/80 hover:border-[#2B3D25]/10"
               }`}
             >
               <span className="block text-lg font-medium mb-1">
@@ -101,7 +101,7 @@ export default function TripOptions() {
           </div>
 
           {/* RIGHT: Detail Card */}
-          <div className="lg:col-span-7 bg-[#F4F3EF] rounded-4xl p-8 md:p-12 shadow-sm">
+          <div className="lg:col-span-7 bg-[#E6E3D2]/40 rounded-xl p-8 md:p-12 shadow-lg">
             <h3 className="text-2xl font-medium mb-4">
               {options[activeTab].title}
             </h3>

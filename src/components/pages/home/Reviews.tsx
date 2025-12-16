@@ -47,7 +47,7 @@ export default function ReviewsSection() {
             <button className="w-10 h-10 rounded-full border border-[#2B3D25]/20 flex items-center justify-center hover:bg-[#2B3D25]/5 transition-colors">
               <ChevronLeft strokeWidth={1.5} className="w-5 h-5 opacity-70" />
             </button>
-            <button className="w-10 h-10 rounded-full bg-[#1A2318] text-[#EAE8DF] flex items-center justify-center hover:bg-opacity-90 transition-colors">
+            <button className="w-10 h-10 rounded-full bg-[#2B3D25] text-[#EAE8DF] flex items-center justify-center hover:bg-opacity-90 transition-colors">
               <ChevronRight strokeWidth={1.5} className="w-5 h-5" />
             </button>
           </div>
@@ -58,7 +58,7 @@ export default function ReviewsSection() {
           {reviews.map((review) => (
             <div
               key={review.id}
-              className="bg-[#E5E3DA] p-8 rounded-2xl flex flex-col justify-between min-h-80 hover:shadow-md transition-shadow duration-300"
+              className="bg-[#E6E3D2] p-8 rounded-2xl flex flex-col justify-between min-h-80 hover:shadow-md transition-shadow duration-300"
             >
               {/* Stars & Text */}
               <div className="space-y-6">
