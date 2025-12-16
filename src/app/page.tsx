@@ -1,5 +1,6 @@
 import AboutSection from "@/components/pages/home/About";
 import BenefitsSection from "@/components/pages/home/Benefits";
+import CtaBanner from "@/components/pages/home/CTABanner";
 import DestinationsSection from "@/components/pages/home/Destinations";
 import HeroSection from "@/components/pages/home/Hero";
 import MissionSection from "@/components/pages/home/Mission";
@@ -14,6 +15,7 @@ export default function Home() {
       <MissionSection />
       <DestinationsSection />
       <BenefitsSection />
+      <CtaBanner />
     </main>
   );
 }
