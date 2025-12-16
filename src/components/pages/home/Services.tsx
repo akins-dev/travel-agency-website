@@ -102,7 +102,7 @@ export default function ServicesSection() {
       </div>
 
       {/* --- CONTENT GRID --- */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full max-w-[1600px] mx-auto items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full max-w-400 mx-auto items-center">
         {/* COL 1: NAVIGATION (3 cols) */}
         <div className="lg:col-span-3 flex flex-col gap-2">
           {services.map((service, index) => (
@@ -121,7 +121,7 @@ export default function ServicesSection() {
         </div>
 
         {/* COL 2: IMAGE DISPLAY (5 cols) */}
-        <div className="lg:col-span-5 h-[500px] md:h-[600px] relative rounded-[2rem] overflow-hidden bg-[#E1DFD6]">
+        <div className="lg:col-span-5 h-125 md:h-150 relative rounded-4xl overflow-hidden bg-[#E1DFD6]">
           {services.map((service, index) => (
             <div
               key={service.id}
@@ -160,7 +160,7 @@ export default function ServicesSection() {
           {/* Feature Box */}
           <div className="flex items-start gap-4 bg-[#E5E3DA] p-4 rounded-xl">
             <div className="mt-1">{services[activeTab].featureIcon}</div>
-            <p className="text-xs font-semibold leading-relaxed max-w-[200px]">
+            <p className="text-xs font-semibold leading-relaxed max-w-50">
               {services[activeTab].featureText}
             </p>
           </div>
