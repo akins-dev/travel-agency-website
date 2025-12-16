@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  /* Color Variables */
+  --background: #e7e5d9; /* The signature bone/beige */
+  --foreground: #2b3d25; /* Dark Olive/Black text */
+  --primary: #2b3d25; /* Dark green for buttons/headings */
+  --ui-accent: #d0cec6; /* The pill button background */
+
+  /* Font Variables */
+  --font-sans: var(--font-inter), sans-serif;
+  --font-serif: var(--font-playfair), serif;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Hide scrollbar for clean UI if desired */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
