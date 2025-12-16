@@ -5,13 +5,13 @@ export default function AboutSection() {
   return (
     <section className="bg-[#EAE8DF] w-full px-4 md:px-8 py-20 text-[#2B3D25] font-sans">
       {/* MASTER GRID: 12 Columns */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 w-full max-w-[1800px] mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 w-full max-w-450 mx-auto">
         {/* --- LEFT COLUMN GROUP (Spans 8 cols) --- */}
         <div className="lg:col-span-8 flex flex-col gap-16">
           {/* 1. TOP ROW: Image + Text */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-start">
             {/* Left: Square Image (Meteora) */}
-            <div className="relative aspect-square w-full rounded-[1.5rem] overflow-hidden bg-[#E1DFD6]">
+            <div className="relative aspect-square w-full rounded-3xl overflow-hidden bg-[#E1DFD6]">
               <Image
                 src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200&auto=format&fit=crop" // Meteora rocks placeholder
                 alt="Meteora Rocks"
@@ -67,7 +67,7 @@ export default function AboutSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
               {/* Feature 1 */}
               <div className="border-t border-[#2B3D25]/20 pt-6 flex justify-between items-start gap-4">
-                <div className="space-y-2 max-w-[200px]">
+                <div className="space-y-2 max-w-50">
                   <h4 className="text-sm font-semibold">Professional team</h4>
                   <p className="text-xs leading-relaxed opacity-60">
                     With years of experience in tourism, making sure you enjoy
@@ -82,7 +82,7 @@ export default function AboutSection() {
 
               {/* Feature 2 */}
               <div className="border-t border-[#2B3D25]/20 pt-6 flex justify-between items-start gap-4">
-                <div className="space-y-2 max-w-[220px]">
+                <div className="space-y-2 max-w-55">
                   <h4 className="text-sm font-semibold">Flexibility</h4>
                   <p className="text-xs leading-relaxed opacity-60">
                     From historic landmarks to airports and ports – we take you
@@ -100,7 +100,7 @@ export default function AboutSection() {
 
         {/* --- RIGHT COLUMN (Spans 4 cols, Full Height) --- */}
         <div className="lg:col-span-4 h-full hidden lg:block">
-          <div className="relative h-full w-full rounded-[1.5rem] overflow-hidden bg-[#E1DFD6] min-h-[600px]">
+          <div className="relative h-full w-full rounded-3xl overflow-hidden bg-[#E1DFD6] min-h-150">
             <Image
               src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1776&auto=format&fit=crop" // Ancient Columns placeholder
               alt="Ancient Greek Columns"
