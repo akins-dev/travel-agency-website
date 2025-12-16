@@ -53,7 +53,7 @@ export default function DestinationsSection() {
   return (
     <section className="bg-[#EAE8DF] w-full px-4 md:px-8 py-20 text-[#2B3D25] font-sans">
       {/* --- HEADER --- */}
-      <div className="max-w-[1800px] mx-auto mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div className="max-w-450 mx-auto mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
         {/* Left: Titles */}
         <div className="space-y-4">
           <div className="flex items-center gap-2 opacity-60">
@@ -95,14 +95,14 @@ export default function DestinationsSection() {
       {/* On Mobile: 'overflow-x-auto' creates a horizontal scroll snap.
          On Desktop: 'lg:grid-cols-4' locks it into the layout seen in your screenshot.
       */}
-      <div className="flex lg:grid lg:grid-cols-4 gap-6 overflow-x-auto pb-8 lg:pb-0 snap-x snap-mandatory w-full max-w-[1800px] mx-auto scrollbar-hide">
+      <div className="flex lg:grid lg:grid-cols-4 gap-6 overflow-x-auto pb-8 lg:pb-0 snap-x snap-mandatory w-full max-w-450 mx-auto scrollbar-hide">
         {destinations.map((item) => (
           <div
             key={item.id}
-            className="min-w-[85vw] md:min-w-[45vw] lg:min-w-0 snap-center bg-[#F4F3EF] p-4 rounded-[1.5rem] flex flex-col group hover:shadow-lg transition-shadow duration-300"
+            className="min-w-[85vw] md:min-w-[45vw] lg:min-w-0 snap-center bg-[#F4F3EF] p-4 rounded-3xl flex flex-col group hover:shadow-lg transition-shadow duration-300"
           >
             {/* Image Container */}
-            <div className="relative h-[240px] w-full rounded-xl overflow-hidden bg-[#E1DFD6] mb-5">
+            <div className="relative h-60 w-full rounded-xl overflow-hidden bg-[#E1DFD6] mb-5">
               <Image
                 src={item.image}
                 alt={item.title}
