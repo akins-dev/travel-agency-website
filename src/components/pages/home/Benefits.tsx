@@ -41,7 +41,7 @@ const benefits = [
 export default function BenefitsSection() {
   return (
     <section className="bg-[#EAE8DF] w-full px-4 md:px-8 py-20 text-[#2B3D25] font-sans">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 w-full max-w-[1800px] mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 w-full max-w-450 mx-auto">
         {/* --- LEFT COLUMN (Sticky Text) --- */}
         <div className="lg:col-span-5 flex flex-col justify-start lg:sticky lg:top-32 h-fit space-y-8">
           {/* Label */}
