@@ -3,10 +3,7 @@ import Image from "next/image";
 export default function MissionSection() {
   return (
     <section className="bg-[#EAE8DF] w-full px-4 md:px-8 py-12 font-sans text-[#2B3D25]">
-      {/* Container Card: 
-        Uses a slightly darker beige (#E5E3DA) to distinguish itself 
-        subtly from the main background (#EAE8DF).
-      */}
+      {/* Container Card */}
       <div className="bg-[#E6E3D2] w-full max-w-450 mx-auto rounded-3xl px-6 py-24 md:py-32 flex flex-col items-center justify-center text-center space-y-12">
         {/* --- TOP LABEL --- */}
         <div className="flex flex-col items-center gap-3 opacity-50">
