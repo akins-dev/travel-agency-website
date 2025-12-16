@@ -11,7 +11,7 @@ export default function AboutSection() {
           {/* 1. TOP ROW: Image + Text */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-start">
             {/* Left: Square Image (Meteora) */}
-            <div className="relative aspect-square w-full rounded-3xl overflow-hidden bg-[#E1DFD6]">
+            <div className="relative aspect-square w-full rounded-3xl overflow-hidden bg-[#E6E3D2]">
               <Image
                 src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200&auto=format&fit=crop" // Meteora rocks placeholder
                 alt="Meteora Rocks"
@@ -100,7 +100,7 @@ export default function AboutSection() {
 
         {/* --- RIGHT COLUMN (Spans 4 cols, Full Height) --- */}
         <div className="lg:col-span-4 h-full hidden lg:block">
-          <div className="relative h-full w-full rounded-3xl overflow-hidden bg-[#E1DFD6] min-h-150">
+          <div className="relative h-full w-full rounded-3xl overflow-hidden bg-[#E6E3D2] min-h-150">
             <Image
               src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1776&auto=format&fit=crop" // Ancient Columns placeholder
               alt="Ancient Greek Columns"

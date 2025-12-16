@@ -121,7 +121,7 @@ export default function ServicesSection() {
         </div>
 
         {/* COL 2: IMAGE DISPLAY (5 cols) */}
-        <div className="lg:col-span-5 h-125 md:h-150 relative rounded-4xl overflow-hidden bg-[#E1DFD6]">
+        <div className="lg:col-span-5 h-125 md:h-150 relative rounded-4xl overflow-hidden bg-[#E6E3D2]">
           {services.map((service, index) => (
             <div
               key={service.id}

@@ -102,7 +102,7 @@ export default function DestinationsSection() {
             className="min-w-[85vw] md:min-w-[45vw] lg:min-w-0 snap-center bg-[#F4F3EF] p-4 rounded-3xl flex flex-col group hover:shadow-lg transition-shadow duration-300"
           >
             {/* Image Container */}
-            <div className="relative h-60 w-full rounded-xl overflow-hidden bg-[#E1DFD6] mb-5">
+            <div className="relative h-60 w-full rounded-xl overflow-hidden bg-[#E6E3D2] mb-5">
               <Image
                 src={item.image}
                 alt={item.title}

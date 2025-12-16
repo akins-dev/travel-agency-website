@@ -103,7 +103,7 @@ export default function Hero() {
 
         {/* Hero Image Container */}
         {/* Added bg-[#EAE8DF] here so it shows while image loads */}
-        <div className="relative w-full h-[50vh] md:h-[70vh] rounded-4xl overflow-hidden bg-[#EAE8DF]">
+        <div className="relative w-full h-[50vh] md:h-[70vh] rounded-4xl overflow-hidden bg-[#E6E3D2]">
           <Image
             src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?q=80&w=2600&auto=format&fit=crop" // Placeholder for Greek landscape
             alt="Greek Temple Landscape"
