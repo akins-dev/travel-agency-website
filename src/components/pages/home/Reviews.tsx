@@ -27,7 +27,7 @@ const reviews = [
 export default function ReviewsSection() {
   return (
     <section className="bg-[#EAE8DF] w-full px-4 md:px-8 py-20 text-[#2B3D25] font-sans">
-      <div className="max-w-[1800px] mx-auto">
+      <div className="max-w-450 mx-auto">
         {/* --- HEADER --- */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="space-y-4">
@@ -58,7 +58,7 @@ export default function ReviewsSection() {
           {reviews.map((review) => (
             <div
               key={review.id}
-              className="bg-[#E5E3DA] p-8 rounded-2xl flex flex-col justify-between min-h-[320px] hover:shadow-md transition-shadow duration-300"
+              className="bg-[#E5E3DA] p-8 rounded-2xl flex flex-col justify-between min-h-80 hover:shadow-md transition-shadow duration-300"
             >
               {/* Stars & Text */}
               <div className="space-y-6">
