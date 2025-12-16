@@ -8,7 +8,7 @@ import ServicesSection from "@/components/pages/home/Services";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-[#EAE8DF]">
       <HeroSection />
       <AboutSection />
       <ServicesSection />

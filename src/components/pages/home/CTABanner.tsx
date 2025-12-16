@@ -8,7 +8,7 @@ export default function CtaBanner() {
         - Rounded corners (rounded-[2.5rem]) match the previous 'Mission' card.
         - High height (60vh) creates an immersive window effect.
       */}
-      <div className="relative w-full max-w-[1800px] mx-auto h-[500px] md:h-[600px] rounded-[2.5rem] overflow-hidden group">
+      <div className="relative w-full max-w-450 mx-auto h-125 md:h-150 rounded-3xl overflow-hidden group">
         {/* Background Image */}
         <Image
           src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?q=80&w=2600&auto=format&fit=crop" // Meteora / Rocks
@@ -23,7 +23,7 @@ export default function CtaBanner() {
            - Uses a subtle gradient to keep the center clear but edges distinct.
         */}
         <div className="absolute inset-0 bg-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-black/20" />
 
         {/* Centered Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-[#EAE8DF] space-y-8 px-4">
