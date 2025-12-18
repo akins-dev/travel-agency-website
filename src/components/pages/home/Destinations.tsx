@@ -11,8 +11,7 @@ const destinations = [
   {
     id: 1,
     title: "Athens: Top Sights",
-    image:
-      "https://images.unsplash.com/photo-1555993539-1732b6255196?q=80&w=800&auto=format&fit=crop",
+    image: "/images/athens.png",
     duration: "5-6 hours",
     description: "Explore Athens' ancient landmarks and vibrant city center.",
     accessible: true,
@@ -20,8 +19,7 @@ const destinations = [
   {
     id: 2,
     title: "Corinthos Canal & Argolis",
-    image:
-      "https://images.unsplash.com/photo-1560751978-5246f4889c25?q=80&w=800&auto=format&fit=crop", // Canal placeholder
+    image: "/images/Corinthos.png", // Canal placeholder
     duration: "11 hours",
     description:
       "Travel back in time on this day tour to the Corinth Canal from Athens.",
@@ -30,8 +28,7 @@ const destinations = [
   {
     id: 3,
     title: "Sounion & Vouliagmeni Lake",
-    image:
-      "https://images.unsplash.com/photo-1623832729930-1582260656a8?q=80&w=800&auto=format&fit=crop", // Sounion placeholder
+    image: "/images/Sounion.png", // Sounion placeholder
     duration: "4-5 hours",
     description:
       "Take a trip to the Athens Riviera and visit the breathtaking Vouliagmeni Lake.",
@@ -40,8 +37,7 @@ const destinations = [
   {
     id: 4,
     title: "Meteora & Thermopylae",
-    image:
-      "https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?q=80&w=800&auto=format&fit=crop", // Meteora placeholder
+    image: "/images/1.jpg", // Meteora placeholder
     duration: "4-5 hours",
     description:
       "Discover breathtaking monasteries and ancient rock formations.",
