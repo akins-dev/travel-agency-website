@@ -9,8 +9,7 @@ const services = [
   {
     id: "private",
     label: "Private Tours",
-    image:
-      "https://images.unsplash.com/photo-1596710629193-273577317789?q=80&w=2000&auto=format&fit=crop", // Van on road
+    image: "/images/1.jpg", // Van on road
     category: "AS YOU WISH",
     title: (
       <>
@@ -27,8 +26,7 @@ const services = [
   {
     id: "scheduled",
     label: "Scheduled Tours",
-    image:
-      "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1776&auto=format&fit=crop", // Ancient ruins
+    image: "/images/Ancient-Greek-Columns.jpg", // Ancient ruins
     category: "GROUP EXPERIENCE",
     title: (
       <>
@@ -45,8 +43,7 @@ const services = [
   {
     id: "transfers",
     label: "Transfers",
-    image:
-      "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=2000&auto=format&fit=crop", // Car interior/road
+    image: "/images/transfers.jpg", // Car interior/road
     category: "SEAMLESS TRAVEL",
     title: (
       <>
@@ -64,7 +61,7 @@ const services = [
     id: "accessibility",
     label: "Wheelchair Accessibility",
     image:
-      "https://images.unsplash.com/photo-1562923696-932f741ba207?q=80&w=2000&auto=format&fit=crop", // Accessible path/view
+      "/images/accessiblility.png", // Accessible path/view
     category: "INCLUSIVE TRAVEL",
     title: (
       <>
