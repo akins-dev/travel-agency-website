@@ -132,10 +132,10 @@ export default function DestinationsSection() {
 
               {/* Action Buttons (Footer) */}
               <div className="mt-auto grid grid-cols-2 gap-3">
-                <button className="py-2.5 rounded-lg border border-[#2B3D25]/20 text-xs font-bold uppercase tracking-wide hover:bg-[#2B3D25]/5 transition-colors">
+                <button className="py-2.5 rounded-lg border border-[#2B3D25]/20 text-xs font-bold uppercase tracking-wide hover:bg-[#2B3D25]/5 text-[#2B3D25] transition-colors">
                   More Info
                 </button>
-                <button className="py-2.5 rounded-lg bg-[#1A2318] text-[#EAE8DF] text-xs font-bold uppercase tracking-wide hover:bg-opacity-90 transition-colors">
+                <button className="py-2.5 rounded-lg bg-[#2B3D25] text-[#EAE8DF] text-xs font-bold uppercase tracking-wide hover:bg-opacity-90 transition-colors">
                   Book
                 </button>
               </div>
