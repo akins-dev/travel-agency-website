@@ -105,7 +105,7 @@ export default function Hero() {
         {/* Added bg-[#EAE8DF] here so it shows while image loads */}
         <div className="relative w-full h-[50vh] md:h-[70vh] rounded-4xl overflow-hidden bg-[#E6E3D2]">
           <Image
-            src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?q=80&w=2600&auto=format&fit=crop" // Placeholder for Greek landscape
+            src="/images/1.jpg" // Placeholder for Greek landscape
             alt="Greek Temple Landscape"
             fill
             className="object-cover"
