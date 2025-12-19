@@ -1,3 +1,5 @@
+import Container from "@/components/Container";
+import Navbar from "@/components/Navbar";
 import AboutSection from "@/components/pages/home/About";
 import BenefitsSection from "@/components/pages/home/Benefits";
 import CtaBanner from "@/components/pages/home/CTABanner";
@@ -12,7 +14,8 @@ import TripOptions from "@/components/pages/home/TripOptions";
 
 export default function Home() {
   return (
-    <main className="bg-[#EAE8DF]">
+    <Container className="bg-[#EAE8DF]">
+      {/* <Navbar /> */}
       <HeroSection />
       <AboutSection />
       <ServicesSection />
@@ -24,6 +27,6 @@ export default function Home() {
       <ReviewsSection />
       <FaqSection />
       <Footer />
-    </main>
+    </Container>
   );
 }
