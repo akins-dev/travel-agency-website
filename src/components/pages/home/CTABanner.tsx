@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function CtaBanner() {
   return (
-    <section className="bg-[#EAE8DF] w-full px-4 md:px-8 py-12 font-sans">
+    <section className="bg-[#EAE8DF] w-full py-12 font-sans">
       {/* Main Banner Container 
         - Rounded corners (rounded-[2.5rem]) match the previous 'Mission' card.
         - High height (60vh) creates an immersive window effect.
