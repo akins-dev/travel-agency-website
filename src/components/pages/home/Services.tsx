@@ -80,7 +80,7 @@ export default function ServicesSection() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="bg-[#EAE8DF] w-full px-4 md:px-8 py-20 text-[#2B3D25] font-sans">
+    <section className="bg-[#EAE8DF] w-full py-20 text-[#2B3D25] font-sans">
       {/* --- HEADER --- */}
       <div className="text-center space-y-4 mb-16">
         <div className="flex items-center justify-center gap-2 opacity-60">
