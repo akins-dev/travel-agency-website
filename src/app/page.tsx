@@ -14,18 +14,22 @@ import TripOptions from "@/components/pages/home/TripOptions";
 
 export default function Home() {
   return (
-    <Container className="bg-[#EAE8DF]">
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <MissionSection />
-      <DestinationsSection />
-      <BenefitsSection />
-      <CtaBanner />
-      <TripOptions />
-      <ReviewsSection />
-      <FaqSection />
-      <Footer />
-    </Container>
+    <>
+      <Container className="bg-[#EAE8DF]">
+        <HeroSection />
+        <AboutSection />
+        <ServicesSection />
+        <MissionSection />
+        <DestinationsSection />
+        <BenefitsSection />
+        <CtaBanner />
+        <TripOptions />
+        <ReviewsSection />
+        <FaqSection />
+      </Container>
+      <Container className="bg-[#E2DFCE]">
+        <Footer />
+      </Container>
+    </>
   );
 }
