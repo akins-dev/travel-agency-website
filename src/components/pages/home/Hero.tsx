@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
-import Container from "@/components/Container";
 
 export default function Hero() {
   return (
@@ -42,7 +41,7 @@ export default function Hero() {
           </div>
 
           {/* HERO IMAGE */}
-          <div className="relative w-full h-[45vh] lg:h-[60vh] rounded-[2rem] lg:rounded-[3rem] overflow-hidden bg-[#DCDAD2]">
+          <div className="relative w-full h-[45vh] lg:h-[60vh] rounded-xl lg:rounded-4xl overflow-hidden bg-[#DCDAD2]">
             <Image
               src="/images/1.jpg"
               alt="Greek Landscape with Columns"

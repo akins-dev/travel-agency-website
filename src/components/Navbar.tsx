@@ -2,7 +2,6 @@
 
 import { Globe, ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
-import Container from "./Container"; // Import the reusable component
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

@@ -3,15 +3,15 @@ import { ArrowUpRight, Star, MapPin } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section className="bg-[#EAE8DF] w-full px-4 md:px-8 py-20 text-[#2B3D25] font-sans">
+    <section className="bg-[#EAE8DF] w-full  py-20 text-[#2B3D25] font-sans">
       {/* MASTER GRID: 12 Columns */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 w-full max-w-450 mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 w-full  mx-auto">
         {/* --- LEFT COLUMN GROUP (Spans 8 cols) --- */}
         <div className="lg:col-span-8 flex flex-col gap-16">
           {/* 1. TOP ROW: Image + Text */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-start">
             {/* Left: Square Image (Meteora) */}
-            <div className="relative aspect-square w-full rounded-3xl overflow-hidden bg-[#E6E3D2]">
+            <div className="relative aspect-square w-full rounded-xl lg:rounded-4xl overflow-hidden bg-[#E6E3D2]">
               <Image
                 src="/images/Meteora-Rocks.jpg" // Meteora rocks placeholder
                 alt="Meteora Rocks"
@@ -100,7 +100,7 @@ export default function AboutSection() {
 
         {/* --- RIGHT COLUMN (Spans 4 cols, Full Height) --- */}
         <div className="lg:col-span-4 h-full hidden lg:block">
-          <div className="relative h-full w-full rounded-3xl overflow-hidden bg-[#E6E3D2] min-h-150">
+          <div className="relative h-full w-full rounded-xl lg:rounded-4xl overflow-hidden bg-[#E6E3D2] min-h-150">
             <Image
               src="/images/Ancient-Greek-Columns.jpg" // Ancient Columns placeholder
               alt="Ancient Greek Columns"

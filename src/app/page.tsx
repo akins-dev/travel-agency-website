@@ -15,7 +15,6 @@ import TripOptions from "@/components/pages/home/TripOptions";
 export default function Home() {
   return (
     <Container className="bg-[#EAE8DF]">
-      {/* <Navbar /> */}
       <HeroSection />
       <AboutSection />
       <ServicesSection />
