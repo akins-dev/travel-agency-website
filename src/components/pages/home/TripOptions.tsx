@@ -39,8 +39,8 @@ export default function TripOptions() {
   );
 
   return (
-    <section className="bg-[#EAE8DF] w-full px-4 md:px-8 py-20 text-[#2B3D25] font-sans">
-      <div className="max-w-300 mx-auto">
+    <section className="bg-[#EAE8DF] w-full py-20 text-[#2B3D25] font-sans">
+      <div className=" mx-auto">
         {/* --- HEADER --- */}
         <div className="text-center space-y-4 mb-16">
           <div className="flex items-center justify-center gap-2 opacity-60">
