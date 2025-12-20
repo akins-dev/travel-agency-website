@@ -39,7 +39,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="bg-[#EAE8DF] w-full px-4 md:px-8 py-20 text-[#2B3D25] font-sans">
+    <section className="bg-[#EAE8DF] w-full py-20 text-[#2B3D25] font-sans">
       <div className="max-w-450 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
         {/* --- LEFT COLUMN (Sticky Title) --- */}
         <div className="lg:col-span-5">
