@@ -47,7 +47,7 @@ const destinations = [
 
 export default function DestinationsSection() {
   return (
-    <section className="bg-[#EAE8DF] w-full px-4 md:px-8 py-20 text-[#2B3D25] font-sans">
+    <section className="bg-[#EAE8DF] w-full py-20 text-[#2B3D25] font-sans">
       {/* --- HEADER --- */}
       <div className="max-w-450 mx-auto mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
         {/* Left: Titles */}
