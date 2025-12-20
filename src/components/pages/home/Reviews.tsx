@@ -26,7 +26,7 @@ const reviews = [
 
 export default function ReviewsSection() {
   return (
-    <section className="bg-[#EAE8DF] w-full px-4 md:px-8 py-20 text-[#2B3D25] font-sans">
+    <section className="bg-[#EAE8DF] w-full py-20 text-[#2B3D25] font-sans">
       <div className="max-w-450 mx-auto">
         {/* --- HEADER --- */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
