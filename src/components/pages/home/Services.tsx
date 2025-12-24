@@ -9,7 +9,7 @@ const services = [
   {
     id: "private",
     label: "Private Tours",
-    image: "/images/1.jpg", // Van on road
+    image: "/images/private-car.png", // Van on road
     category: "AS YOU WISH",
     title: (
       <>
@@ -60,8 +60,7 @@ const services = [
   {
     id: "accessibility",
     label: "Wheelchair Accessibility",
-    image:
-      "/images/accessiblility.png", // Accessible path/view
+    image: "/images/accessiblility.png", // Accessible path/view
     category: "INCLUSIVE TRAVEL",
     title: (
       <>
