@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function AboutFooterCTA() {
   return (
-    <section className="bg-[#E6E3D2] w-full px-4 md:px-8 py-20 pb-32 text-[#2B3D25] font-sans flex flex-col items-center text-center">
+    <section className="bg-[#E6E3D2] w-full py-20 pb-32 text-[#2B3D25] font-sans flex flex-col items-center text-center">
       {/* Icon (Stack) */}
       <div className="flex flex-col gap-[3px] items-center opacity-50 mb-4">
         <div className="w-3 h-[1.5px] bg-current rounded-full" />

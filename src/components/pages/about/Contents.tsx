@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function AboutContent() {
   return (
-    <section className="bg-[#EAE8DF] w-full px-4 md:px-8 py-12 text-[#2B3D25] font-sans">
+    <section className="bg-[#EAE8DF] w-full py-12 text-[#2B3D25] font-sans">
       <div className="max-w-[1800px] mx-auto">
         {/* --- HEADER SECTION --- */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-24 lg:mb-32 border-b border-[#2B3D25]/10 pb-20">
@@ -27,7 +27,7 @@ export default function AboutContent() {
           {/* COL 1: Sticky Left Panel */}
           {/* 'lg:sticky lg:top-32' restores the scroll effect you asked for. 
              It will stick while scrolling past the Vehicles/Image content. */}
-          <div className="lg:col-span-3 lg:sticky lg:top-32 h-fit z-10">
+          <div className="lg:col-span-3 h-fit z-10">
             <span className="inline-block border-b border-[#2B3D25] pb-0.5 text-xs font-bold uppercase tracking-widest">
               What we do?
             </span>
