@@ -4,14 +4,10 @@ import { ArrowUpRight } from "lucide-react";
 export default function CtaBanner() {
   return (
     <section className="bg-[#EAE8DF] w-full py-12 font-sans">
-      {/* Main Banner Container 
-        - Rounded corners (rounded-[2.5rem]) match the previous 'Mission' card.
-        - High height (60vh) creates an immersive window effect.
-      */}
       <div className="relative w-full max-w-450 mx-auto h-125 md:h-150 rounded-xl lg:rounded-4xl overflow-hidden group">
         {/* Background Image */}
         <Image
-          src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?q=80&w=2600&auto=format&fit=crop" // Meteora / Rocks
+          src="/images/1.jpg"
           alt="Meteora Landscape"
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-[2s] ease-out"
@@ -35,7 +31,7 @@ export default function CtaBanner() {
 
           {/* Action Link */}
           <a
-            href="#"
+            href="/tours"
             className="group flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-[0.15em] hover:text-white transition-colors mt-4"
           >
             <span className="border-b border-[#EAE8DF]/50 pb-1 group-hover:border-[#EAE8DF] transition-colors">
