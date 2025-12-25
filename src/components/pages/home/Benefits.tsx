@@ -66,7 +66,7 @@ export default function BenefitsSection() {
 
           {/* Link */}
           <a
-            href="#"
+            href="/about"
             className="group inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide border-b border-[#2B3D25]/30 pb-0.5 hover:border-[#2B3D25] w-fit transition-colors pt-4"
           >
             More About Us
