@@ -13,7 +13,7 @@ export default function AboutSection() {
             {/* Left: Square Image (Meteora) */}
             <div className="relative aspect-square w-full rounded-xl lg:rounded-4xl overflow-hidden bg-[#E6E3D2]">
               <Image
-                src="/images/Meteora-Rocks.jpg" // Meteora rocks placeholder
+                src="/images/Meteora-Rocks.jpg"
                 alt="Meteora Rocks"
                 fill
                 className="object-cover mix-blend-multiply hover:scale-105 transition-transform duration-700"
@@ -48,7 +48,7 @@ export default function AboutSection() {
 
               {/* Link */}
               <a
-                href="#"
+                href="/about"
                 className="group inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide mt-8 border-b border-[#2B3D25]/30 pb-0.5 hover:border-[#2B3D25] w-fit transition-colors"
               >
                 More About Us
@@ -102,7 +102,7 @@ export default function AboutSection() {
         <div className="lg:col-span-4 h-full hidden lg:block">
           <div className="relative h-full w-full rounded-xl lg:rounded-4xl overflow-hidden bg-[#E6E3D2] min-h-150">
             <Image
-              src="/images/Ancient-Greek-Columns.jpg" // Ancient Columns placeholder
+              src="/images/Ancient-Greek-Columns.jpg"
               alt="Ancient Greek Columns"
               fill
               className="object-cover mix-blend-multiply hover:scale-105 transition-transform duration-1000"
