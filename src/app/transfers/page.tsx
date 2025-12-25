@@ -6,10 +6,14 @@ import TransferPricing from "@/components/pages/transfers/Pricing";
 
 export default function TransfersPage() {
   return (
-    <Container className="bg-[#EAE8DF] min-h-screen selection:bg-[#2B3D25] selection:text-[#EAE8DF]">
-      <TransferHero />
-      <TransferPricing />
-      <TransferContact />
-    </Container>
+    <>
+      <Container className="bg-[#EAE8DF] min-h-screen selection:bg-[#2B3D25] selection:text-[#EAE8DF]">
+        <TransferHero />
+        <TransferPricing />
+      </Container>
+      <Container className="bg-[#E2DFCE]">
+        <TransferContact />
+      </Container>
+    </>
   );
 }

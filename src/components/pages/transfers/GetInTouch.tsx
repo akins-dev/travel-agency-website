@@ -2,7 +2,7 @@ import { Mail, PenTool, Phone } from "lucide-react";
 
 export default function TransferContact() {
   return (
-    <section className="bg-[#EAE8DF] w-full py-32 text-[#2B3D25] font-sans border-t border-[#2B3D25]/5">
+    <section className="bg-[#E2DFCE] w-full py-32 text-[#2B3D25] font-sans border-t border-[#2B3D25]/5">
       <div className="max-w-[1000px] mx-auto text-center space-y-20">
         {/* Header */}
         <div className="space-y-6">
