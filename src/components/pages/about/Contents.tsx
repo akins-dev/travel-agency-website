@@ -6,7 +6,8 @@ export default function AboutContent() {
     <section className="bg-[#EAE8DF] w-full py-12 text-[#2B3D25] font-sans">
       <div className="max-w-[1800px] mx-auto">
         {/* --- HEADER SECTION --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-24 lg:mb-32 border-b border-[#2B3D25]/10 pb-20">
+        {/* Reduced bottom margin (mb-20) to tighten gap between Header and Row 1 */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-16 lg:mb-20 border-b border-[#2B3D25]/10 pb-16">
           <div className="lg:col-span-7">
             <h2 className="text-3xl md:text-5xl leading-[1.1] font-medium tracking-tight">
               Armonia Excursions was created with a clear purpose: to make every
@@ -22,16 +23,15 @@ export default function AboutContent() {
         </div>
 
         {/* --- ROW 1: What we do / Vehicles / Car Image --- */}
-        {/* Added 'items-start' to allow the sticky column to float freely */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-12 gap-y-16 items-start mb-24 lg:mb-32 relative">
+        {/* Reduced vertical gap (gap-y-12) to bring rows closer */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-10 lg:gap-x-16 gap-y-12 items-start mb-16 lg:mb-24 relative">
           {/* COL 1: Sticky Left Panel */}
-          {/* 'lg:sticky lg:top-32' restores the scroll effect you asked for. 
-             It will stick while scrolling past the Vehicles/Image content. */}
-          <div className="lg:col-span-3 h-fit z-10">
+          <div className="lg:col-span-3 h-fit z-10 lg:top-32">
             <span className="inline-block border-b border-[#2B3D25] pb-0.5 text-xs font-bold uppercase tracking-widest">
               What we do?
             </span>
-            <h3 className="text-2xl md:text-3xl mt-6 font-medium leading-tight max-w-[200px]">
+            {/* FIX: Removed 'max-w-[200px]' so text flows naturally */}
+            <h3 className="text-2xl md:text-3xl mt-6 font-medium leading-tight">
               We provide premium transportation with a personal touch.
             </h3>
           </div>
@@ -59,7 +59,6 @@ export default function AboutContent() {
           </div>
 
           {/* COL 3: Car Image */}
-          {/* aspect-[4/3] keeps the image compact and balanced with the text */}
           <div className="lg:col-span-4 pt-2">
             <div className="relative w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden bg-[#E1DFD6]">
               <Image
@@ -73,9 +72,8 @@ export default function AboutContent() {
         </div>
 
         {/* --- ROW 2: Accessibility / Team --- */}
-        {/* A new grid row ensures these top-align perfectly regardless of content above */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-12 gap-y-16 items-start">
-          {/* Spacer for Col 1 alignment */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-10 lg:gap-x-16 gap-y-12 items-start">
+          {/* Spacer */}
           <div className="hidden lg:block lg:col-span-3" />
 
           {/* COL 2: Accessibility */}
