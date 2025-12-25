@@ -19,7 +19,7 @@ const destinations = [
   {
     id: 2,
     title: "Corinthos Canal & Argolis",
-    image: "/images/Corinthos.png", // Canal placeholder
+    image: "/images/Corinthos.png",
     duration: "11 hours",
     description:
       "Travel back in time on this day tour to the Corinth Canal from Athens.",
@@ -28,7 +28,7 @@ const destinations = [
   {
     id: 3,
     title: "Sounion & Vouliagmeni Lake",
-    image: "/images/Sounion.png", // Sounion placeholder
+    image: "/images/Sounion.png",
     duration: "4-5 hours",
     description:
       "Take a trip to the Athens Riviera and visit the breathtaking Vouliagmeni Lake.",
@@ -37,11 +37,11 @@ const destinations = [
   {
     id: 4,
     title: "Meteora & Thermopylae",
-    image: "/images/1.jpg", // Meteora placeholder
+    image: "/images/1.jpg",
     duration: "4-5 hours",
     description:
       "Discover breathtaking monasteries and ancient rock formations.",
-    accessible: false, // Image didn't show badge, but kept logic flexible
+    accessible: false,
   },
 ];
 
@@ -64,7 +64,7 @@ export default function DestinationsSection() {
               Explore our popular destinations!
             </h2>
             <a
-              href="#"
+              href="/tours"
               className="group inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide border-b border-[#2B3D25]/30 pb-0.5 hover:border-[#2B3D25] transition-colors"
             >
               View All Tours
@@ -88,9 +88,6 @@ export default function DestinationsSection() {
       </div>
 
       {/* --- CARDS GRID / SLIDER --- */}
-      {/* On Mobile: 'overflow-x-auto' creates a horizontal scroll snap.
-         On Desktop: 'lg:grid-cols-4' locks it into the layout seen in your screenshot.
-      */}
       <div className="flex lg:grid lg:grid-cols-4 gap-6 overflow-x-auto pb-8 lg:pb-0 snap-x snap-mandatory w-full max-w-450 mx-auto scrollbar-hide">
         {destinations.map((item) => (
           <div
