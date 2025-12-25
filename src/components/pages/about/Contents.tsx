@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 export default function AboutContent() {
   return (
     <section className="bg-[#EAE8DF] w-full py-12 text-[#2B3D25] font-sans">
-      <div className="max-w-[1800px] mx-auto">
+      <div className="max-w-450 mx-auto">
         {/* --- HEADER SECTION --- */}
         {/* Reduced bottom margin (mb-20) to tighten gap between Header and Row 1 */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-16 lg:mb-20 border-b border-[#2B3D25]/10 pb-16">
