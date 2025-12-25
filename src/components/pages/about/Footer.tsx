@@ -4,7 +4,7 @@ export default function AboutFooterCTA() {
   return (
     <section className="bg-[#E6E3D2] w-full py-20 pb-32 text-[#2B3D25] font-sans flex flex-col items-center text-center">
       {/* Icon (Stack) */}
-      <div className="flex flex-col gap-[3px] items-center opacity-50 mb-4">
+      <div className="flex flex-col gap-0.75 items-center opacity-50 mb-4">
         <div className="w-3 h-[1.5px] bg-current rounded-full" />
         <div className="w-5 h-[1.5px] bg-current rounded-full" />
         <div className="w-3 h-[1.5px] bg-current rounded-full" />
@@ -20,7 +20,7 @@ export default function AboutFooterCTA() {
       </h2>
 
       <a
-        href="#"
+        href="/contacts"
         className="group inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide border-b border-[#2B3D25]/30 pb-0.5 hover:border-[#2B3D25] transition-colors"
       >
         Contact Us

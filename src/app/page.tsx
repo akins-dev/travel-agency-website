@@ -1,5 +1,4 @@
 import Container from "@/components/Container";
-import Navbar from "@/components/Navbar";
 import AboutSection from "@/components/pages/home/About";
 import BenefitsSection from "@/components/pages/home/Benefits";
 import CtaBanner from "@/components/pages/home/CTABanner";
