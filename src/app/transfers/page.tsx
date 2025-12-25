@@ -3,7 +3,6 @@ import TransferContact from "@/components/pages/transfers/GetInTouch";
 import TransferHero from "@/components/pages/transfers/Hero";
 import TransferPricing from "@/components/pages/transfers/Pricing";
 
-
 export default function TransfersPage() {
   return (
     <>

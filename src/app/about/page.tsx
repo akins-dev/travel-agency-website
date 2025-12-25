@@ -10,9 +10,9 @@ export default function AboutPage() {
         <AboutHero />
         <AboutContent />
       </Container>
-        <Container className="bg-[#E6E3D2]">
-          <AboutFooterCTA />
-        </Container>
+      <Container className="bg-[#E6E3D2]">
+        <AboutFooterCTA />
+      </Container>
     </>
   );
 }
