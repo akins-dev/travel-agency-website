@@ -6,7 +6,6 @@ export default function AboutContent() {
     <section className="bg-[#EAE8DF] w-full py-12 text-[#2B3D25] font-sans">
       <div className="max-w-450 mx-auto">
         {/* --- HEADER SECTION --- */}
-        {/* Reduced bottom margin (mb-20) to tighten gap between Header and Row 1 */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-16 lg:mb-20 border-b border-[#2B3D25]/10 pb-16">
           <div className="lg:col-span-7">
             <h2 className="text-3xl md:text-5xl leading-[1.1] font-medium tracking-tight">
@@ -23,14 +22,12 @@ export default function AboutContent() {
         </div>
 
         {/* --- ROW 1: What we do / Vehicles / Car Image --- */}
-        {/* Reduced vertical gap (gap-y-12) to bring rows closer */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-10 lg:gap-x-16 gap-y-12 items-start mb-16 lg:mb-24 relative">
-          {/* COL 1: Sticky Left Panel */}
+          {/* COL 1: Left Panel */}
           <div className="lg:col-span-3 h-fit z-10 lg:top-32">
             <span className="inline-block border-b border-[#2B3D25] pb-0.5 text-xs font-bold uppercase tracking-widest">
               What we do?
             </span>
-            {/* FIX: Removed 'max-w-[200px]' so text flows naturally */}
             <h3 className="text-2xl md:text-3xl mt-6 font-medium leading-tight">
               We provide premium transportation with a personal touch.
             </h3>
@@ -60,7 +57,7 @@ export default function AboutContent() {
 
           {/* COL 3: Car Image */}
           <div className="lg:col-span-4 pt-2">
-            <div className="relative w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden bg-[#E1DFD6]">
+            <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden bg-[#E1DFD6]">
               <Image
                 src="/images/mercedes.png"
                 alt="Luxury Mercedes Vito"
@@ -88,9 +85,9 @@ export default function AboutContent() {
                 believe travel should be effortless and enjoyable for everyone.
               </h4>
               <p className="text-sm leading-relaxed opacity-70">
-                That's why we offer wheelchair-friendly vehicles, ensuring that
-                no traveler misses the opportunity to experience the beauty of
-                Greece. Your comfort and ease are always our priority.
+                That&apos;s why we offer wheelchair-friendly vehicles, ensuring
+                that no traveler misses the opportunity to experience the beauty
+                of Greece. Your comfort and ease are always our priority.
               </p>
             </div>
           </div>
@@ -104,21 +101,22 @@ export default function AboutContent() {
             <div className="space-y-8 max-w-sm mt-2">
               <div className="text-sm leading-relaxed opacity-70 space-y-4">
                 <p>
-                  Our drivers aren't just there to get you from one place to
-                  another - they're professionals who prioritize your safety and
-                  comfort.
+                  Our drivers aren&apos;t just there to get you from one place
+                  to another - they&apos;re professionals who prioritize your
+                  safety and comfort.
                 </p>
                 <p>
                   Beyond their expertise on the road, they are passionate guides
-                  with a deep knowledge of Greece's history and culture. Whether
-                  sharing local stories or helping you uncover hidden gems, they
-                  ensure every journey is as enriching as it is secure.
+                  with a deep knowledge of Greece&apos;s history and culture.
+                  Whether sharing local stories or helping you uncover hidden
+                  gems, they ensure every journey is as enriching as it is
+                  secure.
                 </p>
               </div>
 
               {/* Link */}
               <a
-                href="#"
+                href="/tours"
                 className="group inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide border-b border-[#2B3D25]/30 pb-0.5 hover:border-[#2B3D25] transition-colors"
               >
                 Explore Destinations
