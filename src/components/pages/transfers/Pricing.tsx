@@ -85,7 +85,7 @@ export default function TransferPricing() {
           {vehicles.map((vehicle) => (
             <div
               key={vehicle.id}
-              className="bg-[#F4F3EF] p-8 rounded-[1.5rem] flex flex-col group hover:-translate-y-2 hover:shadow-xl transition-all duration-500 ease-out"
+              className="bg-[#F4F3EF] p-8 rounded-[1.5rem] flex flex-col group transition-all duration-500 ease-out"
             >
               {/* Vehicle Image Container */}
               <div className="relative aspect-16/10 w-full mb-8 bg-[#EAE8DF] rounded-xl overflow-hidden ">
