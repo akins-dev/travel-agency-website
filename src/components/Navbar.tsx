@@ -73,15 +73,22 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="fixed inset-0 bg-[#E9E7DE] z-40 flex flex-col items-center justify-center lg:hidden">
           <ul className="flex flex-col items-center gap-8 text-2xl font-medium text-[#2B3D25]">
-            {["Home", "About us", "Transfers", "Tours", "Contacts"].map(
-              (item) => (
-                <li key={item}>
-                  <a href="#" onClick={() => setIsMobileMenuOpen(false)}>
-                    {item}
+            {[
+                { label: "Home", href: "/" },
+                { label: "About us", href: "/about" },
+                { label: "Transfers", href: "/transfers" },
+                { label: "Tours", href: "/tours" },
+                { label: "Contacts", href: "/contacts" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    className="hover:opacity-60 transition-opacity"
+                  >
+                    {link.label}
                   </a>
                 </li>
-              )
-            )}
+              ))}
             <li className="mt-8">
               <button className="bg-[#2B3D25] text-[#E9E7DE] px-8 py-3 rounded-lg text-base">
                 Book a Tour
