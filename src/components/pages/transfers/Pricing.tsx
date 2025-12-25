@@ -9,8 +9,7 @@ const vehicles = [
     id: "car",
     type: "Car",
     capacity: "3 people",
-    image:
-      "https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=800&auto=format&fit=crop",
+    image: "/images/car1.png",
     rates: {
       day: { airport: 45, port: 35, connection: 60 },
       night: { airport: 55, port: 45, connection: 70 },
@@ -21,8 +20,7 @@ const vehicles = [
     id: "van",
     type: "Van",
     capacity: "7 people",
-    image:
-      "https://images.unsplash.com/photo-1632245889029-e413143756ac?q=80&w=800&auto=format&fit=crop",
+    image: "/images/car2.png",
     rates: {
       day: { airport: 75, port: 65, connection: 90 },
       night: { airport: 85, port: 75, connection: 100 },
@@ -33,8 +31,7 @@ const vehicles = [
     id: "minibus",
     type: "Minibus",
     capacity: "12 people",
-    image:
-      "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=800&auto=format&fit=crop",
+    image: "/images/car3.png",
     rates: {
       day: { airport: 100, port: 90, connection: 120 },
       night: { airport: 120, port: 110, connection: 140 },
@@ -54,7 +51,7 @@ export default function TransferPricing() {
           <div className="relative flex items-center gap-12 border-b border-[#2B3D25]/10 pb-4">
             <button
               onClick={() => setRateType("day")}
-              className={`text-sm font-bold uppercase tracking-widest transition-colors duration-300 ${
+              className={`text-md font-bold transition-colors duration-300 ${
                 rateType === "day"
                   ? "opacity-100"
                   : "opacity-40 hover:opacity-70"
@@ -65,7 +62,7 @@ export default function TransferPricing() {
 
             <button
               onClick={() => setRateType("night")}
-              className={`text-sm font-bold uppercase tracking-widest transition-colors duration-300 ${
+              className={`text-md font-bold transition-colors duration-300 ${
                 rateType === "night"
                   ? "opacity-100"
                   : "opacity-40 hover:opacity-70"
@@ -91,12 +88,12 @@ export default function TransferPricing() {
               className="bg-[#F4F3EF] p-8 rounded-[1.5rem] flex flex-col group hover:-translate-y-2 hover:shadow-xl transition-all duration-500 ease-out"
             >
               {/* Vehicle Image Container */}
-              <div className="relative aspect-[16/10] w-full mb-8 bg-[#EAE8DF] rounded-xl overflow-hidden mix-blend-multiply">
+              <div className="relative aspect-16/10 w-full mb-8 bg-[#EAE8DF] rounded-xl overflow-hidden ">
                 <Image
                   src={vehicle.image}
                   alt={vehicle.type}
                   fill
-                  className="object-contain p-4 mix-blend-multiply group-hover:scale-105 transition-transform duration-700"
+                  className="object-fit group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
 
