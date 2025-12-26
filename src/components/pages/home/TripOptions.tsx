@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { CheckCircle2, XCircle, MapPin } from "lucide-react";
 
-// Data for the two distinct options
 const options = {
   private: {
     title: "Private Group Tours",

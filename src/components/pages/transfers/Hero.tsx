@@ -28,7 +28,7 @@ export default function TransferHero() {
           </div>
 
           {/* --- CINEMATIC IMAGE --- */}
-          <div className="relative w-full aspect-[21/9] md:aspect-[2.4/1] rounded-[2rem] overflow-hidden bg-[#E1DFD6] group">
+          <div className="relative w-full  h-[45vh] lg:h-[60vh] rounded-xl lg:rounded-4xl overflow-hidden bg-[#E1DFD6] group">
             <Image
               src="/images/private-car.png"
               alt="Armonia Transfer Van"
