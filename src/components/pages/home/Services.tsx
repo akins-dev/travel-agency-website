@@ -1,4 +1,4 @@
-"use client"; // Required for interactivity (useState)
+"use client"; 
 
 import { useState } from "react";
 import Image from "next/image";
@@ -9,7 +9,7 @@ const services = [
   {
     id: "private",
     label: "Private Tours",
-    image: "/images/private-car.png", // Van on road
+    image: "/images/private-car.png",
     category: "AS YOU WISH",
     title: (
       <>
@@ -26,7 +26,7 @@ const services = [
   {
     id: "scheduled",
     label: "Scheduled Tours",
-    image: "/images/Ancient-Greek-Columns.jpg", // Ancient ruins
+    image: "/images/Ancient-Greek-Columns.jpg",
     category: "GROUP EXPERIENCE",
     title: (
       <>
@@ -43,7 +43,7 @@ const services = [
   {
     id: "transfers",
     label: "Transfers",
-    image: "/images/transfers.jpg", // Car interior/road
+    image: "/images/transfers.jpg",
     category: "SEAMLESS TRAVEL",
     title: (
       <>
@@ -60,7 +60,7 @@ const services = [
   {
     id: "accessibility",
     label: "Wheelchair Accessibility",
-    image: "/images/accessiblility.png", // Accessible path/view
+    image: "/images/accessiblility.png", 
     category: "INCLUSIVE TRAVEL",
     title: (
       <>
@@ -107,8 +107,8 @@ export default function ServicesSection() {
               onClick={() => setActiveTab(index)}
               className={`text-left px-6 py-4 rounded-lg text-sm font-medium transition-all duration-300 ${
                 activeTab === index
-                  ? "bg-[#2B3D25] text-[#EAE8DF] shadow-lg" // Active State
-                  : "bg-[#E5E3DA] text-[#2B3D25] hover:bg-[#dcdad2]" // Inactive State
+                  ? "bg-[#2B3D25] text-[#EAE8DF] shadow-lg" 
+                  : "bg-[#E5E3DA] text-[#2B3D25] hover:bg-[#dcdad2]"
               }`}
             >
               {service.label}
@@ -163,7 +163,7 @@ export default function ServicesSection() {
 
           {/* Link */}
           <a
-            href="#"
+            href="/tours"
             className="group inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide border-b border-[#2B3D25]/30 pb-0.5 hover:border-[#2B3D25] transition-colors"
           >
             Explore Tours
