@@ -4,9 +4,7 @@ import Navbar from "@/components/Navbar";
 
 export default function Hero() {
   return (
-    // The background color is applied here to the full width
     <section className="bg-[#E9E7DE] min-h-screen w-full flex flex-col font-sans">
-      {/* Navbar sits inside the section flow */}
       <Navbar />
 
       {/* Main Content */}
@@ -24,12 +22,12 @@ export default function Hero() {
 
             {/* 2. Description & Link Group */}
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:gap-16 lg:pb-3">
-              <p className="text-sm md:text-base max-w-[250px] leading-snug font-normal text-[#2B3D25]/90">
+              <p className="text-sm md:text-base max-w-62.5 leading-snug font-normal text-[#2B3D25]/90">
                 The most popular and trusted travel agency in Greece
               </p>
 
               <a
-                href="#"
+                href="/tours"
                 className="group flex items-center gap-1 text-xs font-semibold uppercase tracking-wider underline-offset-4 decoration-[#2B3D25]/30 hover:decoration-[#2B3D25]"
               >
                 <span className="border-b border-[#2B3D25]/30 group-hover:border-[#2B3D25] transition-colors pb-0.5 text-[#2B3D25]">
