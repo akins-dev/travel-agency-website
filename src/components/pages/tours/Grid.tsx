@@ -4,13 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 import { Clock, Accessibility } from "lucide-react";
 
-// --- MOCK DATA BASED ON SCREENSHOT ---
 const allTours = [
   {
     id: 1,
     title: "Athens: Top Sights",
-    image:
-      "/images/athens.png",
+    image: "/images/athens.png",
     duration: "5-6 hours",
     description: "Explore Athens' ancient landmarks and vibrant city center.",
     accessible: true,
@@ -18,8 +16,7 @@ const allTours = [
   {
     id: 2,
     title: "Meteora & Thermopylae",
-    image:
-      "/images/1.jpg",
+    image: "/images/1.jpg",
     duration: "4-5 hours",
     description:
       "Discover breathtaking monasteries and ancient rock formations.",
@@ -28,8 +25,7 @@ const allTours = [
   {
     id: 3,
     title: "Corinthos Canal & Argolis",
-    image:
-      "/images/Corinthos.png",
+    image: "/images/Corinthos.png",
     duration: "11 hours",
     description:
       "Travel back in time on this day tour to the Corinth Canal from Athens.",
@@ -38,8 +34,7 @@ const allTours = [
   {
     id: 4,
     title: "Mycenae, Nafplion & Epidavros",
-    image:
-      "/images/Mycenae.png",
+    image: "/images/Mycenae.png",
     duration: "10 hours",
     description: "Discover ancient sites and a charming medieval city.",
     accessible: false,
@@ -47,8 +42,7 @@ const allTours = [
   {
     id: 5,
     title: "Olympia, Corinth Canal & Peristeria",
-    image:
-      "/images/Olympia.png",
+    image: "/images/Olympia.png",
     duration: "5-6 hours",
     description: "Visit the birthplace of the Olympic Games.",
     accessible: false,
@@ -56,8 +50,7 @@ const allTours = [
   {
     id: 6,
     title: "Delphi, the navel of the Earth",
-    image:
-      "/images/Delphi.png",
+    image: "/images/Delphi.png",
     duration: "5-6 hours",
     description:
       "Discover the navel of the earth. UNESCO listed Delphi Archaeological Site.",
@@ -66,8 +59,7 @@ const allTours = [
   {
     id: 7,
     title: "Wine, Olive Oil & Cheese",
-    image:
-      "/images/WineOliveCheese.png",
+    image: "/images/WineOliveCheese.png",
     duration: "11 hours",
     description:
       "Enjoy the authentic flavors of Greek cheese, olive oil and wine.",
@@ -76,8 +68,7 @@ const allTours = [
   {
     id: 8,
     title: "Sounion & Vouliagmeni Lake",
-    image:
-      "/images/Sounion.png",
+    image: "/images/Sounion.png",
     duration: "10 hours",
     description:
       "Take a trip to the Athens Riviera and visit breathtaking Vouliagmeni Lake.",
@@ -86,8 +77,7 @@ const allTours = [
   {
     id: 9,
     title: "Athens, Sounio & Vouliagmeni",
-    image:
-      "/images/AthensSounio.png",
+    image: "/images/AthensSounio.png",
     duration: "4-5 hours",
     description:
       "Experience Athens' top sights, including the Acropolis, Panathenaic Stadium and more.",
@@ -104,7 +94,7 @@ export default function ToursGrid() {
 
   return (
     <section className="w-full pb-32 text-[#2B3D25] font-sans">
-      <div className="max-w-[1800px] mx-auto">
+      <div className="max-w-450 mx-auto">
         {/* --- TABS --- */}
         <div className="flex justify-center mb-16">
           <div className="relative flex items-center gap-12 border-b border-[#2B3D25]/10 pb-4">
@@ -130,8 +120,8 @@ export default function ToursGrid() {
 
             {/* Sliding Underline */}
             <div
-              className={`absolute bottom-[-1px] h-[2px] bg-[#2B3D25] transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1) ${
-                filter === "all" ? "left-0 w-[80px]" : "left-[120px] w-[260px]" // Adjusted to match the wider text of 2nd tab
+              className={`absolute -bottom-px h-0.5 bg-[#2B3D25] transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1) ${
+                filter === "all" ? "left-0 w-20" : "left-30 w-65"
               }`}
             />
           </div>
@@ -142,10 +132,10 @@ export default function ToursGrid() {
           {filteredTours.map((tour) => (
             <div
               key={tour.id}
-              className="bg-[#F4F3EF] p-2 rounded-[1.5rem] flex flex-col group hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              className="bg-[#F4F3EF] p-2 rounded-3xl flex flex-col group hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
             >
               {/* Image Container */}
-              <div className="relative h-[240px] w-full rounded-xl overflow-hidden bg-[#E1DFD6] mb-5">
+              <div className="relative h-60 w-full rounded-xl overflow-hidden bg-[#E1DFD6] mb-5">
                 <Image
                   src={tour.image}
                   alt={tour.title}
