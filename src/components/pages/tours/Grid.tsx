@@ -103,7 +103,7 @@ export default function ToursGrid() {
     filter === "all" ? allTours : allTours.filter((tour) => tour.accessible);
 
   return (
-    <section className="w-full px-4 md:px-8 pb-32 text-[#2B3D25] font-sans">
+    <section className="w-full pb-32 text-[#2B3D25] font-sans">
       <div className="max-w-[1800px] mx-auto">
         {/* --- TABS --- */}
         <div className="flex justify-center mb-16">

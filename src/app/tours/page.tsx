@@ -1,3 +1,4 @@
+import Container from "@/components/Container";
 import ToursGrid from "@/components/pages/tours/Grid";
 import ToursHero from "@/components/pages/tours/Hero";
 import type { Metadata } from "next";
@@ -10,9 +11,9 @@ export const metadata: Metadata = {
 
 export default function ToursPage() {
   return (
-    <main className="bg-[#EAE8DF] min-h-screen w-full selection:bg-[#2B3D25] selection:text-[#EAE8DF]">
+    <Container className="bg-[#EAE8DF] min-h-screen w-full selection:bg-[#2B3D25] selection:text-[#EAE8DF]">
       <ToursHero />
       <ToursGrid />
-    </main>
+    </Container>
   );
 }

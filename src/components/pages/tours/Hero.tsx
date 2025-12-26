@@ -1,9 +1,11 @@
+import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
 export default function ToursHero() {
   return (
-    <section className="w-full pt-32 pb-12 text-[#2B3D25] font-sans">
-      <div className="max-w-[1800px] mx-auto px-4 md:px-8">
+    <section className="w-full text-[#2B3D25] font-sans">
+      <Navbar />
+      <div className="max-w-[1800px] pt-32 pb-12">
         {/* Title */}
         <h1 className="text-[10vw] lg:text-[7.5rem] leading-none font-medium tracking-tight uppercase mb-12">
           All Tours
