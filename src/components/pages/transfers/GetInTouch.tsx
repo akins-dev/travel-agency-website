@@ -3,7 +3,7 @@ import { Mail, PenTool, Phone } from "lucide-react";
 export default function TransferContact() {
   return (
     <section className="bg-[#E2DFCE] w-full py-32 text-[#2B3D25] font-sans border-t border-[#2B3D25]/5">
-      <div className="max-w-[1000px] mx-auto text-center space-y-20">
+      <div className="max-w-250 mx-auto text-center space-y-20">
         {/* Header */}
         <div className="space-y-6">
           <span className="flex items-center justify-center gap-2 text-[10px] font-bold uppercase tracking-widest opacity-60">
@@ -14,7 +14,7 @@ export default function TransferContact() {
             Have a question or need <br /> assistance?
           </h2>
           <p className="text-sm opacity-60">
-            We're here to help in the way most convenient for you:
+            We&apos;re here to help in the way most convenient for you:
           </p>
         </div>
 
@@ -34,7 +34,7 @@ export default function TransferContact() {
               className="text-xs font-bold relative pb-1 overflow-hidden"
             >
               <span className="relative z-10">info@armonia-excursions.gr</span>
-              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#2B3D25] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-px bg-[#2B3D25] transition-all duration-300 group-hover:w-full"></span>
             </a>
           </div>
 
@@ -47,7 +47,7 @@ export default function TransferContact() {
               <h3 className="font-bold text-sm">Fill out Form</h3>
               <p className="text-xs opacity-60">Submit your request online</p>
             </div>
-            <button className="bg-[#2B3D25] text-[#EAE8DF] px-8 py-3 rounded-[4px] text-[10px] font-bold uppercase tracking-wide hover:opacity-90 hover:shadow-md transition-all mt-1">
+            <button className="bg-[#2B3D25] text-[#EAE8DF] px-8 py-3 rounded-sm text-[10px] font-bold uppercase tracking-wide hover:opacity-90 hover:shadow-md transition-all mt-1">
               Leave Request
             </button>
           </div>
@@ -66,7 +66,7 @@ export default function TransferContact() {
               className="text-xs font-bold relative pb-1 overflow-hidden"
             >
               <span className="relative z-10">+30 694 455 3616</span>
-              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#2B3D25] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-px bg-[#2B3D25] transition-all duration-300 group-hover:w-full"></span>
             </a>
           </div>
         </div>
