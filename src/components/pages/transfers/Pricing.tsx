@@ -45,7 +45,7 @@ export default function TransferPricing() {
 
   return (
     <section className="bg-[#EAE8DF] w-full py-20 text-[#2B3D25] font-sans">
-      <div className="max-w-[1400px] mx-auto">
+      <div className="max-w-350 mx-auto">
         {/* --- ANIMATED TABS --- */}
         <div className="flex justify-center mb-24">
           <div className="relative flex items-center gap-12 border-b border-[#2B3D25]/10 pb-4">
@@ -71,10 +71,9 @@ export default function TransferPricing() {
               Night rate
             </button>
 
-            {/* Sliding Underline - Precise positioning based on text width */}
             <div
-              className={`absolute bottom-[-1px] h-[2px] bg-[#2B3D25] transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1) ${
-                rateType === "day" ? "left-0 w-[70px]" : "left-[108px] w-[85px]"
+              className={`absolute -bottom-px h-0.5 bg-[#2B3D25] transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1) ${
+                rateType === "day" ? "left-0 w-17.5" : "left-27 w-21.25"
               }`}
             />
           </div>
@@ -85,7 +84,7 @@ export default function TransferPricing() {
           {vehicles.map((vehicle) => (
             <div
               key={vehicle.id}
-              className="bg-[#F4F3EF] p-8 rounded-[1.5rem] flex flex-col group transition-all duration-500 ease-out"
+              className="bg-[#F4F3EF] p-3 rounded-3xl flex flex-col group transition-all duration-500 ease-out"
             >
               {/* Vehicle Image Container */}
               <div className="relative aspect-16/10 w-full mb-8 bg-[#EAE8DF] rounded-xl overflow-hidden ">
@@ -148,7 +147,7 @@ export default function TransferPricing() {
 
         {/* --- CTA BUTTON --- */}
         <div className="flex justify-center">
-          <button className="bg-[#2B3D25] text-[#EAE8DF] px-12 py-4 rounded-[4px] text-xs font-bold uppercase tracking-widest hover:bg-[#1f2d1b] hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-[#2B3D25]/20">
+          <button className="bg-[#2B3D25] text-[#EAE8DF] px-12 py-4 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#1f2d1b] hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-[#2B3D25]/20">
             Book Transfer
           </button>
         </div>
