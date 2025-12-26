@@ -110,7 +110,7 @@ export default function ToursGrid() {
           <div className="relative flex items-center gap-12 border-b border-[#2B3D25]/10 pb-4">
             <button
               onClick={() => setFilter("all")}
-              className={`text-sm font-bold uppercase tracking-widest transition-colors duration-300 ${
+              className={`text-sm font-bold transition-colors duration-300 ${
                 filter === "all" ? "opacity-100" : "opacity-40 hover:opacity-70"
               }`}
             >
@@ -119,7 +119,7 @@ export default function ToursGrid() {
 
             <button
               onClick={() => setFilter("accessible")}
-              className={`text-sm font-bold uppercase tracking-widest transition-colors duration-300 ${
+              className={`text-sm font-bold transition-colors duration-300 ${
                 filter === "accessible"
                   ? "opacity-100"
                   : "opacity-40 hover:opacity-70"
@@ -160,7 +160,7 @@ export default function ToursGrid() {
                       strokeWidth={2}
                       className="w-3 h-3 text-[#2B3D25]"
                     />
-                    <span className="text-[10px] font-bold tracking-wide text-[#2B3D25] uppercase">
+                    <span className="text-[10px] font-bold tracking-wide text-[#2B3D25]">
                       Wheelchair Accessible
                     </span>
                   </div>
