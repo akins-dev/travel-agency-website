@@ -6,6 +6,7 @@ import {
   Instagram,
   Twitter,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -82,7 +83,7 @@ export default function Footer() {
       </div>
 
       {/* ------------------------------- */}
-      {/* PART 2: MAIN FOOTER (Dark)      */}
+      {/* PART 2: MAIN FOOTER (Greenish)      */}
       {/* ------------------------------- */}
       <div className="bg-[#E2DFCE]  pb-8 pt-0">
         <div className="bg-[#2B3D25] text-[#EAE8DF] rounded-[2.5rem] px-8 md:px-16 py-16 md:py-20">
@@ -99,13 +100,22 @@ export default function Footer() {
               </div>
               {/* Socials */}
               <div className="flex gap-4 pt-4">
-                <a href="#" className="hover:opacity-70 transition-opacity">
+                <a
+                  href="https://www.instagram.com/akins.dev_"
+                  className="hover:opacity-70 transition-opacity"
+                >
                   <Instagram className="w-4 h-4" />
                 </a>
-                <a href="#" className="hover:opacity-70 transition-opacity">
+                <a
+                  href="https://www.instagram.com/akins.dev_"
+                  className="hover:opacity-70 transition-opacity"
+                >
                   <Facebook className="w-4 h-4" />
                 </a>
-                <a href="#" className="hover:opacity-70 transition-opacity">
+                <a
+                  href="https://www.instagram.com/akins.dev_"
+                  className="hover:opacity-70 transition-opacity"
+                >
                   <Twitter className="w-4 h-4" />
                 </a>
               </div>
@@ -118,16 +128,16 @@ export default function Footer() {
               </h5>
               <ul className="space-y-3 text-sm font-medium">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/"
                     className="hover:text-[#DCE1A5] transition-colors"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/tours"
                     className="hover:text-[#DCE1A5] transition-colors"
                   >
                     All Tours
@@ -135,7 +145,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/about"
                     className="hover:text-[#DCE1A5] transition-colors"
                   >
                     About Us
@@ -143,7 +153,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/contact"
                     className="hover:text-[#DCE1A5] transition-colors"
                   >
                     Contact
