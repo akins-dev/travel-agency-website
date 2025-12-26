@@ -10,9 +10,9 @@ export default function ToursHero() {
         </h1>
 
         {/* Hero Image */}
-        <div className="relative w-full aspect-[21/9] md:aspect-[2.4/1] rounded-[2rem] overflow-hidden bg-[#E1DFD6] group">
+        <div className="relative w-full aspect-[21/9] md:aspect-[2.4/1] rounded-xl lg:rounded-3xl overflow-hidden bg-[#E1DFD6] group">
           <Image
-            src="/" // Sunset coastline placeholder
+            src="/images/sunset.png" // Sunset coastline placeholder
             alt="Greek Coastline at Sunset"
             fill
             className="object-cover mix-blend-multiply contrast-[1.05] transition-transform duration-[2s] ease-out group-hover:scale-105"
