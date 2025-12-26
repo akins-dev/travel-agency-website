@@ -11,7 +11,7 @@ export default function AboutSection() {
           {/* 1. TOP ROW: Image + Text */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-start">
             {/* Left: Square Image (Meteora) */}
-            <div className="relative aspect-square w-full rounded-xl lg:rounded-4xl overflow-hidden bg-[#E6E3D2]">
+            <div className="relative aspect-square w-full rounded-xl lg:rounded-3xl overflow-hidden bg-[#E6E3D2]">
               <Image
                 src="/images/Meteora-Rocks.jpg"
                 alt="Meteora Rocks"
@@ -100,7 +100,7 @@ export default function AboutSection() {
 
         {/* --- RIGHT COLUMN (Spans 4 cols, Full Height) --- */}
         <div className="lg:col-span-4 h-full hidden lg:block">
-          <div className="relative h-full w-full rounded-xl lg:rounded-4xl overflow-hidden bg-[#E6E3D2] min-h-150">
+          <div className="relative h-full w-full rounded-xl lg:rounded-3xl overflow-hidden bg-[#E6E3D2] min-h-150">
             <Image
               src="/images/Ancient-Greek-Columns.jpg"
               alt="Ancient Greek Columns"
