@@ -10,7 +10,7 @@ const allTours = [
     id: 1,
     title: "Athens: Top Sights",
     image:
-      "https://images.unsplash.com/photo-1555993539-1732b6255196?q=80&w=800&auto=format&fit=crop",
+      "/images/athens.png",
     duration: "5-6 hours",
     description: "Explore Athens' ancient landmarks and vibrant city center.",
     accessible: true,
@@ -19,7 +19,7 @@ const allTours = [
     id: 2,
     title: "Meteora & Thermopylae",
     image:
-      "https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?q=80&w=800&auto=format&fit=crop",
+      "/images/1.jpg",
     duration: "4-5 hours",
     description:
       "Discover breathtaking monasteries and ancient rock formations.",
@@ -29,7 +29,7 @@ const allTours = [
     id: 3,
     title: "Corinthos Canal & Argolis",
     image:
-      "https://images.unsplash.com/photo-1560751978-5246f4889c25?q=80&w=800&auto=format&fit=crop",
+      "/images/Corinthos.png",
     duration: "11 hours",
     description:
       "Travel back in time on this day tour to the Corinth Canal from Athens.",
@@ -39,7 +39,7 @@ const allTours = [
     id: 4,
     title: "Mycenae, Nafplion & Epidavros",
     image:
-      "https://images.unsplash.com/photo-1623832729930-1582260656a8?q=80&w=800&auto=format&fit=crop",
+      "/images/Mycenae.png",
     duration: "10 hours",
     description: "Discover ancient sites and a charming medieval city.",
     accessible: false,
@@ -48,7 +48,7 @@ const allTours = [
     id: 5,
     title: "Olympia, Corinth Canal & Peristeria",
     image:
-      "https://images.unsplash.com/photo-1596710629193-273577317789?q=80&w=800&auto=format&fit=crop",
+      "/images/Olympia.png",
     duration: "5-6 hours",
     description: "Visit the birthplace of the Olympic Games.",
     accessible: false,
@@ -57,7 +57,7 @@ const allTours = [
     id: 6,
     title: "Delphi, the navel of the Earth",
     image:
-      "https://images.unsplash.com/photo-1599423300746-b62507ac97f5?q=80&w=800&auto=format&fit=crop",
+      "/images/Delphi.png",
     duration: "5-6 hours",
     description:
       "Discover the navel of the earth. UNESCO listed Delphi Archaeological Site.",
@@ -67,7 +67,7 @@ const allTours = [
     id: 7,
     title: "Wine, Olive Oil & Cheese",
     image:
-      "https://images.unsplash.com/photo-1524638067-feba7e8ed70f?q=80&w=800&auto=format&fit=crop",
+      "/images/WineOliveCheese.png",
     duration: "11 hours",
     description:
       "Enjoy the authentic flavors of Greek cheese, olive oil and wine.",
@@ -77,7 +77,7 @@ const allTours = [
     id: 8,
     title: "Sounion & Vouliagmeni Lake",
     image:
-      "https://images.unsplash.com/photo-1564053489984-317bbd824340?q=80&w=800&auto=format&fit=crop",
+      "/images/Sounion.png",
     duration: "10 hours",
     description:
       "Take a trip to the Athens Riviera and visit breathtaking Vouliagmeni Lake.",
@@ -87,7 +87,7 @@ const allTours = [
     id: 9,
     title: "Athens, Sounio & Vouliagmeni",
     image:
-      "https://images.unsplash.com/photo-1555993539-1732b6255196?q=80&w=800&auto=format&fit=crop",
+      "/images/AthensSounio.png",
     duration: "4-5 hours",
     description:
       "Experience Athens' top sights, including the Acropolis, Panathenaic Stadium and more.",
