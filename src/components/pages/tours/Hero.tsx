@@ -12,7 +12,7 @@ export default function ToursHero() {
         {/* Hero Image */}
         <div className="relative w-full aspect-[21/9] md:aspect-[2.4/1] rounded-[2rem] overflow-hidden bg-[#E1DFD6] group">
           <Image
-            src="https://images.unsplash.com/photo-1604514787989-1834914c6767?q=80&w=2600&auto=format&fit=crop" // Sunset coastline placeholder
+            src="/" // Sunset coastline placeholder
             alt="Greek Coastline at Sunset"
             fill
             className="object-cover mix-blend-multiply contrast-[1.05] transition-transform duration-[2s] ease-out group-hover:scale-105"

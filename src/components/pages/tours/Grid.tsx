@@ -142,7 +142,7 @@ export default function ToursGrid() {
           {filteredTours.map((tour) => (
             <div
               key={tour.id}
-              className="bg-[#F4F3EF] p-4 rounded-[1.5rem] flex flex-col group hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              className="bg-[#F4F3EF] p-2 rounded-[1.5rem] flex flex-col group hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
             >
               {/* Image Container */}
               <div className="relative h-[240px] w-full rounded-xl overflow-hidden bg-[#E1DFD6] mb-5">
@@ -184,11 +184,11 @@ export default function ToursGrid() {
                 </p>
 
                 {/* Action Buttons (Footer) */}
-                <div className="mt-auto grid grid-cols-2 gap-3 pb-2">
-                  <button className="py-2.5 rounded-lg border border-[#2B3D25]/20 text-xs font-bold uppercase tracking-wide hover:bg-[#2B3D25]/5 transition-colors">
+                <div className="mt-auto grid grid-cols-2 gap-3">
+                  <button className="py-2.5 rounded-lg border border-[#2B3D25]/20 text-xs font-bold uppercase tracking-wide hover:bg-[#2B3D25]/5 text-[#2B3D25] transition-colors">
                     More Info
                   </button>
-                  <button className="py-2.5 rounded-lg bg-[#1A2318] text-[#EAE8DF] text-xs font-bold uppercase tracking-wide hover:bg-opacity-90 transition-colors">
+                  <button className="py-2.5 rounded-lg bg-[#2B3D25] text-[#EAE8DF] text-xs font-bold uppercase tracking-wide hover:bg-opacity-90 transition-colors">
                     Book
                   </button>
                 </div>
