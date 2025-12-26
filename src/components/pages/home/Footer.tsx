@@ -30,52 +30,56 @@ export default function Footer() {
           </div>
 
           {/* Contact Methods Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
             {/* Method 1: Email */}
-            <div className="flex flex-col items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#2B3D25] text-[#EAE8DF] flex items-center justify-center mb-2">
-                <Mail strokeWidth={1.5} className="w-5 h-5" />
+            <div className="flex flex-col items-center gap-6 group cursor-pointer">
+              <div className="w-14 h-14 rounded-full bg-[#2B3D25] text-[#EAE8DF] flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:-rotate-12 transition-all duration-500 cubic-bezier(0.175, 0.885, 0.32, 1.275)">
+                <Mail strokeWidth={1.5} className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-sm">Write Us</h3>
-              <p className="text-xs opacity-60 -mt-2">
-                Reach out to us by email
-              </p>
+              <div className="space-y-1">
+                <h3 className="font-bold text-sm">Write Us</h3>
+                <p className="text-xs opacity-60">Reach out to us by email</p>
+              </div>
               <a
                 href="mailto:info@armonia-excursions.gr"
-                className="text-xs font-bold border-b border-[#2B3D25]/20 hover:border-[#2B3D25] transition-colors pb-0.5"
+                className="text-xs font-bold relative pb-1 overflow-hidden"
               >
-                info@armonia-excursions.gr
+                <span className="relative z-10">
+                  info@armonia-excursions.gr
+                </span>
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-[#2B3D25] transition-all duration-300 group-hover:w-full"></span>
               </a>
             </div>
 
             {/* Method 2: Form */}
-            <div className="flex flex-col items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#2B3D25] text-[#EAE8DF] flex items-center justify-center mb-2">
-                <PenTool strokeWidth={1.5} className="w-5 h-5" />
+            <div className="flex flex-col items-center gap-6 group cursor-pointer">
+              <div className="w-14 h-14 rounded-full bg-[#2B3D25] text-[#EAE8DF] flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 cubic-bezier(0.175, 0.885, 0.32, 1.275)">
+                <PenTool strokeWidth={1.5} className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-sm">Fill out Form</h3>
-              <p className="text-xs opacity-60 -mt-2">
-                Submit your request online
-              </p>
-              <button className="bg-[#2B3D25] text-[#EAE8DF] px-6 py-2.5 rounded-sm text-xs font-bold uppercase tracking-wide hover:opacity-90 transition-opacity mt-1">
+              <div className="space-y-1">
+                <h3 className="font-bold text-sm">Fill out Form</h3>
+                <p className="text-xs opacity-60">Submit your request online</p>
+              </div>
+              <button className="bg-[#2B3D25] text-[#EAE8DF] px-8 py-3 rounded-sm text-[10px] font-bold uppercase tracking-wide hover:opacity-90 hover:shadow-md transition-all mt-1">
                 Leave Request
               </button>
             </div>
 
-            {/* Method 3: Phone */}
-            <div className="flex flex-col items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#2B3D25] text-[#EAE8DF] flex items-center justify-center mb-2">
-                <Phone strokeWidth={1.5} className="w-5 h-5" />
+            {/* Method 3: Call */}
+            <div className="flex flex-col items-center gap-6 group cursor-pointer">
+              <div className="w-14 h-14 rounded-full bg-[#2B3D25] text-[#EAE8DF] flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:-rotate-12 transition-all duration-500 cubic-bezier(0.175, 0.885, 0.32, 1.275)">
+                <Phone strokeWidth={1.5} className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-sm">Call Us</h3>
-              <p className="text-xs opacity-60 -mt-2">
-                Mon-Fri from 9am to 6pm
-              </p>
+              <div className="space-y-1">
+                <h3 className="font-bold text-sm">Call Us</h3>
+                <p className="text-xs opacity-60">Mon-Fri from 8am to 5pm</p>
+              </div>
               <a
                 href="tel:+306944553616"
-                className="text-xs font-bold border-b border-[#2B3D25]/20 hover:border-[#2B3D25] transition-colors pb-0.5"
+                className="text-xs font-bold relative pb-1 overflow-hidden"
               >
-                +30 694 455 3616
+                <span className="relative z-10">+30 694 455 3616</span>
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-[#2B3D25] transition-all duration-300 group-hover:w-full"></span>
               </a>
             </div>
           </div>
