@@ -5,6 +5,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Flame,
+  Accessibility,
 } from "lucide-react";
 
 const destinations = [
@@ -106,7 +107,13 @@ export default function DestinationsSection() {
               {/* Badge */}
               {item.accessible && (
                 <div className="absolute top-3 right-3 bg-[#DCE1A5] px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm">
-                  <span className="text-[10px] font-bold uppercase tracking-wide text-[#2B3D25]">
+                  {/* Icon added here */}
+                  <Accessibility
+                    strokeWidth={2}
+                    className="w-3 h-3 text-[#2B3D25]"
+                  />
+
+                  <span className="text-[10px] font-bold tracking-wide text-[#2B3D25]">
                     Wheelchair Accessible
                   </span>
                 </div>
