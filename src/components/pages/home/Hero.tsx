@@ -14,7 +14,7 @@ export default function Hero() {
           <div className="w-full flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 gap-8 lg:gap-0">
             {/* 1. Main Title */}
             <div className="relative z-10">
-              <h1 className="text-[13vw] lg:text-[7.5rem] leading-[0.85] font-medium tracking-tighter uppercase text-[#2B3D25]">
+              <h1 className="text-[13vw] lg:text-[7.5rem] leading-[0.85] transition-all duration-700  font-medium tracking-tighter uppercase text-[#2B3D25]">
                 <span className="block">Armonia</span>
                 <span className="block">Excursions</span>
               </h1>

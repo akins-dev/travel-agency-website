@@ -8,7 +8,7 @@ export default function AboutHero() {
       <section className="bg-[#EAE8DF] w-full pt-32 pb-12 text-[#2B3D25] font-sans">
         <div className="max-w-450 mx-auto ">
           {/* Page Title */}
-          <h1 className="text-[13vw] lg:text-[7.5rem] font-medium tracking-tight uppercase">
+          <h1 className="text-[13vw] lg:text-[7.5rem] font-medium tracking-tight uppercase transition-all duration-700 ">
             About Us
           </h1>
 

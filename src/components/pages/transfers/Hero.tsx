@@ -6,20 +6,19 @@ export default function TransferHero() {
     <>
       <Navbar />
       <section className="bg-[#EAE8DF] w-full pt-32 pb-16 text-[#2B3D25] font-sans overflow-hidden">
-        <div className="max-w-[1800px] ">
+        <div className="max-w-450">
           {/* --- TITLE GRID --- */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 items-end mb-12">
             {/* Main Headline */}
-            {/* CHANGED: Increased span to 9 and added whitespace-nowrap to force single line */}
-            <div className="lg:col-span-9">
-              <h1 className="text-[10vw] lg:text-[7rem] leading-[0.85] font-medium tracking-tight uppercase transition-all duration-700 whitespace-nowrap">
+            <div className="xl:col-span-9">
+              <h1 className="text-[10vw] xl:text-[7rem] leading-[0.85] font-medium tracking-tight uppercase transition-all duration-700 whitespace-nowrap">
                 Transfer Services
               </h1>
             </div>
 
             {/* Description (Right Aligned) */}
             {/* CHANGED: Reduced span to 3 to accommodate the wider title */}
-            <div className="lg:col-span-3 flex justify-start lg:justify-end pb-2">
+            <div className="xl:col-span-3 flex justify-start xl:justify-end pb-2">
               <p className="text-sm md:text-base leading-relaxed opacity-60 max-w-72 text-left ">
                 At Armonia Excursions, we combine premium service with attention
                 to detail.
