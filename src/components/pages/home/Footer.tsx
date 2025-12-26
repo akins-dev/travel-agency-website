@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full font-sans text-[#2B3D25]">
+    <footer id="#contacts" className="w-full font-sans text-[#2B3D25]">
       {/* ------------------------------- */}
       {/* PART 1: PRE-FOOTER (Contact)    */}
       {/* ------------------------------- */}
@@ -156,12 +156,12 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/contact"
+                  <Link
+                    href="/#contact"
                     className="hover:text-[#DCE1A5] transition-colors"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

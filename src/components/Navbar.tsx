@@ -34,7 +34,7 @@ export default function Navbar() {
                 { label: "About us", href: "/about" },
                 { label: "Transfers", href: "/transfers" },
                 { label: "Tours", href: "/tours" },
-                { label: "Contacts", href: "/contacts" },
+                { label: "Contacts", href: "/#contacts" },
               ].map((link) => (
                 <li key={link.label}>
                   <a
@@ -78,7 +78,7 @@ export default function Navbar() {
               { label: "About us", href: "/about" },
               { label: "Transfers", href: "/transfers" },
               { label: "Tours", href: "/tours" },
-              { label: "Contacts", href: "/contacts" },
+              { label: "Contacts", href: "/#contacts" },
             ].map((link) => (
               <li key={link.label}>
                 <a

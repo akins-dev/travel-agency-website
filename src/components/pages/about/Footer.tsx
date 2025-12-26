@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 export default function AboutFooterCTA() {
   return (
@@ -19,8 +20,8 @@ export default function AboutFooterCTA() {
         your adventure with Armonia - contact us now!
       </h2>
 
-      <a
-        href="/contacts"
+      <Link
+        href="/#contacts"
         className="group inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide border-b border-[#2B3D25]/30 pb-0.5 hover:border-[#2B3D25] transition-colors"
       >
         Contact Us
@@ -28,7 +29,7 @@ export default function AboutFooterCTA() {
           strokeWidth={1.5}
           className="w-3.5 h-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
         />
-      </a>
+      </Link>
     </section>
   );
 }
