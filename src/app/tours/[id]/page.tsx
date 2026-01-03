@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function TourDetailPage({ params }: { params: { id: string } }) {
+    console.log({params})
   return (
     <Container className="bg-[#EAE8DF] min-h-screen selection:bg-[#2B3D25] selection:text-[#EAE8DF]">
       <Navbar />
@@ -20,7 +21,7 @@ export default function TourDetailPage({ params }: { params: { id: string } }) {
       <TourDetailHero />
 
       {/* 2. Main Content Grid (Left: Info/Gallery, Right: Pricing) */}
-      <div className="px-4 md:px-8 max-w-[1800px] mx-auto">
+      <div className="px-4 md:px-8 max-w-450 mx-auto">
         <TourDetailContent />
       </div>
 

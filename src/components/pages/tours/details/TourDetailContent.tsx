@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { Hand, Info, CheckCircle2, XCircle } from "lucide-react";
+import { Hand, Info } from "lucide-react";
 
 export default function TourDetailContent() {
   return (
     <section className="w-full pb-32 text-[#2B3D25] font-sans">
-      <div className="max-w-[1800px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+      <div className="max-w-450 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
         {/* --- LEFT COLUMN (Content & Gallery) --- */}
         <div className="lg:col-span-8 space-y-16">
           {/* About Section */}
@@ -46,7 +46,7 @@ export default function TourDetailContent() {
           {/* Gallery Grid */}
           <div className="space-y-4">
             {/* Large Image */}
-            <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-[#E1DFD6]">
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-[#E1DFD6]">
               <Image
                 src="https://images.unsplash.com/photo-1564344405-b0c41094054a?q=80&w=1200&auto=format&fit=crop" // Stadium
                 alt="Panathenaic Stadium"
@@ -77,7 +77,7 @@ export default function TourDetailContent() {
         {/* --- RIGHT COLUMN (Sticky Booking Card) --- */}
         <div className="lg:col-span-4 relative">
           <div className="sticky top-32">
-            <div className="bg-[#F4F3EF] p-8 rounded-[1.5rem] shadow-sm">
+            <div className="bg-[#F4F3EF] p-8 rounded-3xl shadow-sm">
               <div className="mb-8">
                 <span className="text-[10px] font-bold uppercase tracking-widest opacity-40 mb-2 block">
                   Pricing
