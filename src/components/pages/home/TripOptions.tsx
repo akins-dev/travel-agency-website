@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { CheckCircle2, XCircle, MapPin } from "lucide-react";
+import BookTourModal from "@/components/BookTourModal"; // 1. Import Modal
 
 const options = {
   private: {
@@ -14,7 +15,7 @@ const options = {
       { text: "Minibuses for up to 12 passengers", included: true },
       { text: "Experienced, professional drivers", included: true },
       { text: "Tickets to archaeological sites excluded", included: false },
-      { text: "Extra hours available at an hourly rate", included: false }, // Using 'false' style for visual distinction (greyed out)
+      { text: "Extra hours available at an hourly rate", included: false },
     ],
   },
   scheduled: {
@@ -37,9 +38,19 @@ export default function TripOptions() {
     "private"
   );
 
+  // 2. Add Modal State
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="bg-[#EAE8DF] w-full py-20 text-[#2B3D25] font-sans">
-      <div className=" mx-auto">
+      {/* 3. Render Modal */}
+      <BookTourModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        tourTitle={options[activeTab].title} // Dynamic title based on active tab
+      />
+
+      <div className="max-w-450 mx-auto px-4 md:px-0">
         {/* --- HEADER --- */}
         <div className="text-center space-y-4 mb-16">
           <div className="flex items-center justify-center gap-2 opacity-60">
@@ -57,7 +68,6 @@ export default function TripOptions() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-start">
           {/* LEFT: Toggle Buttons */}
           <div className="lg:col-span-5 flex flex-col gap-4">
-            {/* Private Button */}
             <button
               onClick={() => setActiveTab("private")}
               className={`text-left p-6 rounded-xl transition-all duration-300 border border-transparent ${
@@ -77,7 +87,6 @@ export default function TripOptions() {
                 Great for families, friends, and private groups.
               </span>
             </button>
-            {/* Scheduled Button */}
             <button
               onClick={() => setActiveTab("scheduled")}
               className={`text-left p-6 rounded-xl transition-all duration-300 border border-transparent ${
@@ -135,8 +144,11 @@ export default function TripOptions() {
               ))}
             </div>
 
-            {/* CTA */}
-            <button className="w-full bg-[#2B3D25] text-[#EAE8DF] py-4 rounded-lg text-sm font-bold uppercase tracking-wide hover:opacity-90 transition-opacity">
+            {/* CTA - Trigger Modal */}
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="w-full bg-[#2B3D25] text-[#EAE8DF] py-4 rounded-lg text-sm font-bold uppercase tracking-wide hover:opacity-90 transition-opacity"
+            >
               Book a Tour
             </button>
           </div>
