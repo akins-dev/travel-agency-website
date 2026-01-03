@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Clock, Accessibility } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const allTours = [
   {
@@ -87,10 +88,15 @@ const allTours = [
 
 export default function ToursGrid() {
   const [filter, setFilter] = useState<"all" | "accessible">("all");
+  const router = useRouter();
 
   // Filter Logic
   const filteredTours =
     filter === "all" ? allTours : allTours.filter((tour) => tour.accessible);
+
+  const redirectToDetailsPage = () => {
+    router.push("/tours/1");
+  };
 
   return (
     <section className="w-full pb-32 text-[#2B3D25] font-sans">
@@ -175,7 +181,10 @@ export default function ToursGrid() {
 
                 {/* Action Buttons (Footer) */}
                 <div className="mt-auto grid grid-cols-2 gap-3">
-                  <button className="py-2.5 rounded-lg border border-[#2B3D25]/20 text-xs font-bold uppercase tracking-wide hover:bg-[#2B3D25]/5 text-[#2B3D25] transition-colors">
+                  <button
+                    onClick={redirectToDetailsPage}
+                    className="py-2.5 rounded-lg border border-[#2B3D25]/20 cursor-pointer text-xs font-bold uppercase tracking-wide hover:bg-[#2B3D25]/5 text-[#2B3D25] transition-colors"
+                  >
                     More Info
                   </button>
                   <button className="py-2.5 rounded-lg bg-[#2B3D25] text-[#EAE8DF] text-xs font-bold uppercase tracking-wide hover:bg-opacity-90 transition-colors">
