@@ -124,14 +124,14 @@ export default function BookTourModal({
           </div>
         ) : (
           // SUCCESS STATE
-          <div className="p-12 text-center flex flex-col items-center justify-center min-h-[400px]">
+          <div className="p-12 text-center flex flex-col items-center justify-center min-h-100">
             <div className="w-20 h-20 bg-[#DCE1A5] rounded-full flex items-center justify-center mb-6 animate-in zoom-in duration-300">
               <CheckCircle2 className="w-10 h-10 text-[#2B3D25]" />
             </div>
             <h3 className="text-2xl font-medium text-[#2B3D25] mb-2">
               Request Sent!
             </h3>
-            <p className="text-sm text-[#2B3D25]/60 leading-relaxed max-w-[260px] mb-8">
+            <p className="text-sm text-[#2B3D25]/60 leading-relaxed max-w-65 mb-8">
               Thank you for choosing Armonia. We will review your request and
               get back to you shortly via email.
             </p>
