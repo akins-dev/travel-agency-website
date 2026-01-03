@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Hand, Info } from "lucide-react";
+import BookTourModal from "@/components/BookTourModal";
 
 // Define the gallery images in an array for easy management
 const galleryImages = [
@@ -17,9 +18,15 @@ const galleryImages = [
 export default function TourDetailContent() {
   // State to track the active large image
   const [activeImage, setActiveImage] = useState(galleryImages[0]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section className="w-full pb-32 text-[#2B3D25] font-sans">
+      <BookTourModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        tourTitle="Athens: Top Sights"
+      />
       <div className="max-w-450 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
         {/* --- LEFT COLUMN (Content & Gallery) --- */}
         <div className="lg:col-span-8 space-y-16">
@@ -138,7 +145,10 @@ export default function TourDetailContent() {
                 </div>
               </div>
 
-              <button className="w-full bg-[#2B3D25] text-[#EAE8DF] py-4 rounded-lg text-xs font-bold uppercase tracking-wide hover:opacity-90 transition-opacity shadow-lg">
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="w-full bg-[#2B3D25] text-[#EAE8DF] py-4 rounded-lg text-xs font-bold uppercase tracking-wide hover:opacity-90 transition-opacity shadow-lg"
+              >
                 Book Tour
               </button>
             </div>
