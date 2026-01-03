@@ -26,7 +26,7 @@ export default function Home() {
         <ReviewsSection />
         <FaqSection />
       </Container>
-      <Container className="bg-[#E2DFCE]">
+      <Container className="bg-[#E2DFCE]" id="contacts">
         <Footer />
       </Container>
     </>
