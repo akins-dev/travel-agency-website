@@ -1,7 +1,23 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { Hand, Info } from "lucide-react";
 
+// Define the gallery images in an array for easy management
+const galleryImages = [
+  "/images/athens.png", // Default Main (Stadium)
+  "/images/1.jpg",
+  "/images/acropolis.png",
+  "/images/Acropolis.png",
+  "/images/Olympia.png",
+  "/images/Sounion.png",
+];
+
 export default function TourDetailContent() {
+  // State to track the active large image
+  const [activeImage, setActiveImage] = useState(galleryImages[0]);
+
   return (
     <section className="w-full pb-32 text-[#2B3D25] font-sans">
       <div className="max-w-450 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
@@ -45,30 +61,37 @@ export default function TourDetailContent() {
 
           {/* Gallery Grid */}
           <div className="space-y-4">
-            {/* Large Image */}
+            {/* Large Active Image */}
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-[#E1DFD6]">
+              {/* Used 'key' to force a re-render animation when image changes */}
               <Image
-                src="https://images.unsplash.com/photo-1564344405-b0c41094054a?q=80&w=1200&auto=format&fit=crop" // Stadium
-                alt="Panathenaic Stadium"
+                key={activeImage}
+                src={activeImage}
+                alt="Active Gallery Image"
                 fill
-                className="object-cover mix-blend-multiply hover:scale-105 transition-transform duration-700"
+                className="object-cover mix-blend-multiply transition-transform duration-700 animate-in fade-in"
               />
             </div>
 
             {/* Thumbnails Row */}
-            <div className="grid grid-cols-5 gap-4">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div
-                  key={i}
-                  className="relative aspect-square rounded-xl overflow-hidden bg-[#E1DFD6]"
+            <div className="grid grid-cols-6 gap-4">
+              {galleryImages.map((img, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveImage(img)}
+                  className={`relative aspect-square rounded-xl overflow-hidden bg-[#E1DFD6] transition-all duration-300 ${
+                    activeImage === img
+                      ? "ring-2 ring-[#2B3D25] ring-offset-2 ring-offset-[#EAE8DF] opacity-100"
+                      : "opacity-70 hover:opacity-100 hover:scale-105"
+                  }`}
                 >
                   <Image
-                    src={`https://images.unsplash.com/photo-160${i}565816030-6b389eeb23cb?q=80&w=400&auto=format&fit=crop`}
-                    alt="Gallery"
+                    src={img}
+                    alt={`Gallery Thumbnail ${index + 1}`}
                     fill
-                    className="object-cover mix-blend-multiply hover:scale-110 transition-transform duration-500"
+                    className="object-cover mix-blend-multiply"
                   />
-                </div>
+                </button>
               ))}
             </div>
           </div>
