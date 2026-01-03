@@ -75,7 +75,7 @@ export default function DestinationsSection() {
       />
 
       {/* --- HEADER --- */}
-      <div className="max-w-[1800px] mx-auto mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 px-4 md:px-8">
+      <div className="max-w-450 mx-auto mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 px-4 md:px-8">
         <div className="space-y-4">
           <div className="flex items-center gap-2 opacity-60">
             <Flame className="w-3 h-3 fill-current" />
@@ -133,10 +133,10 @@ export default function DestinationsSection() {
             (item, index) => (
               <div
                 key={`${item.id}-${index}`}
-                className="w-[85vw] md:w-[45vw] lg:w-[320px] shrink-0 bg-[#F4F3EF] p-2 rounded-[1.5rem] flex flex-col group/card hover:-translate-y-2 transition-all hover:shadow-xl duration-500"
+                className="w-[85vw] md:w-[45vw] lg:w-[320px] shrink-0 bg-[#F4F3EF] p-2 rounded-3xl flex flex-col group/card hover:-translate-y-2 transition-all hover:shadow-xl duration-500"
               >
                 {/* Image */}
-                <div className="relative h-[280px] w-full rounded-[1.2rem] overflow-hidden bg-[#E6E3D2] mb-5">
+                <div className="relative h-70 w-full rounded-[1.2rem] overflow-hidden bg-[#E6E3D2] mb-5">
                   <Image
                     src={item.image}
                     alt={item.title}

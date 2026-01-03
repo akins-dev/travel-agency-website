@@ -93,7 +93,7 @@ export default function ReviewsSection() {
         }
       `}</style>
 
-      <div className="max-w-[1800px] mx-auto px-4 md:px-8">
+      <div className="max-w-450 mx-auto px-4 md:px-8">
         {/* --- HEADER --- */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="space-y-4">
@@ -137,7 +137,7 @@ export default function ReviewsSection() {
             {[...reviews, ...reviews, ...reviews].map((review, index) => (
               <div
                 key={`${review.id}-${index}`}
-                className="w-[85vw] md:w-[400px] shrink-0 bg-[#E6E3D2] p-8 rounded-2xl flex flex-col justify-between min-h-[340px] hover:shadow-lg transition-all duration-300"
+                className="w-[85vw] md:w-100 shrink-0 bg-[#E6E3D2] p-8 rounded-2xl flex flex-col justify-between min-h-85 hover:shadow-lg transition-all duration-300"
               >
                 {/* Stars & Text */}
                 <div className="space-y-6">

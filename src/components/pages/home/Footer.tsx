@@ -28,7 +28,7 @@ export default function Footer() {
       {/* PART 1: PRE-FOOTER (Contact)    */}
       {/* ------------------------------- */}
       <div className="bg-[#E2DFCE] py-20">
-        <div className="max-w-[1800px] mx-auto px-4 md:px-8 text-center space-y-16">
+        <div className="max-w-450 mx-auto px-4 md:px-8 text-center space-y-16">
           {/* Header */}
           <div className="space-y-4">
             <span className="text-xs font-bold uppercase tracking-widest opacity-60 flex items-center justify-center gap-2">
@@ -118,7 +118,7 @@ export default function Footer() {
       {/* PART 2: MAIN FOOTER (Greenish)  */}
       {/* ------------------------------- */}
       <div className="bg-[#E2DFCE] pb-8 pt-0">
-        <div className="max-w-[1800px] mx-auto px-4 md:px-8">
+        <div className="max-w-450 mx-auto px-4 md:px-8">
           <div className="bg-[#2B3D25] text-[#EAE8DF] rounded-[2.5rem] px-8 md:px-16 py-16 md:py-20">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-20 border-b border-[#EAE8DF]/10 pb-16">
               {/* COL 1: Logo & Tagline (Spans 4) */}
