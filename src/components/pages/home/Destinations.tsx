@@ -1,4 +1,8 @@
+"use client";
+
+import { useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowUpRight,
   Clock,
@@ -7,7 +11,9 @@ import {
   Flame,
   Accessibility,
 } from "lucide-react";
+import BookTourModal from "@/components/BookTourModal";
 
+// --- DATA ---
 const destinations = [
   {
     id: 1,
@@ -22,8 +28,7 @@ const destinations = [
     title: "Corinthos Canal & Argolis",
     image: "/images/Corinthos.png",
     duration: "11 hours",
-    description:
-      "Travel back in time on this day tour to the Corinth Canal from Athens.",
+    description: "Travel back in time on this day tour to the Corinth Canal.",
     accessible: true,
   },
   {
@@ -31,8 +36,7 @@ const destinations = [
     title: "Sounion & Vouliagmeni Lake",
     image: "/images/Sounion.png",
     duration: "4-5 hours",
-    description:
-      "Take a trip to the Athens Riviera and visit the breathtaking Vouliagmeni Lake.",
+    description: "Visit the Athens Riviera and breathtaking Vouliagmeni Lake.",
     accessible: true,
   },
   {
@@ -44,14 +48,75 @@ const destinations = [
       "Discover breathtaking monasteries and ancient rock formations.",
     accessible: false,
   },
+  {
+    id: 5,
+    title: "Mycenae & Epidaurus",
+    image: "/images/Mycenae.png",
+    duration: "10 hours",
+    description: "Visit the kingdom of Agamemnon and the ancient theater.",
+    accessible: false,
+  },
 ];
 
 export default function DestinationsSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedTour, setSelectedTour] = useState("");
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const handleBookClick = (tourTitle: string) => {
+    setSelectedTour(tourTitle);
+    setIsModalOpen(true);
+  };
+
+  // Manual Navigation Logic
+  const scroll = (direction: "left" | "right") => {
+    if (containerRef.current) {
+      const scrollAmount = 350; // Approx card width
+      containerRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <section className="bg-[#EAE8DF] w-full py-20 text-[#2B3D25] font-sans">
+    <section className="bg-[#EAE8DF] w-full py-20 text-[#2B3D25] font-sans overflow-hidden">
+      {/* --- CSS FOR INFINITE SCROLL & HIDING SCROLLBAR --- */}
+      <style jsx global>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        /* The Infinite Animation */
+        @keyframes infinite-scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          } /* Move half way (the length of original list) */
+        }
+        .animate-infinite-scroll {
+          animation: infinite-scroll 40s linear infinite;
+          width: max-content; /* Force container to fit all items */
+        }
+        /* Pause on Hover */
+        .group:hover .animate-infinite-scroll {
+          animation-play-state: paused;
+        }
+      `}</style>
+
+      <BookTourModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        tourTitle={selectedTour}
+      />
+
       {/* --- HEADER --- */}
-      <div className="max-w-450 mx-auto mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
-        {/* Left: Titles */}
+      <div className="max-w-[1800px] mx-auto mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 px-4 md:px-8">
         <div className="space-y-4">
           <div className="flex items-center gap-2 opacity-60">
             <Flame className="w-3 h-3 fill-current" />
@@ -61,10 +126,10 @@ export default function DestinationsSection() {
           </div>
 
           <div className="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-8">
-            <h2 className="text-3xl md:text-4xl font-medium tracking-tight">
-              Explore our popular destinations!
+            <h2 className="text-3xl md:text-5xl font-medium tracking-tight">
+              Explore popular destinations
             </h2>
-            <a
+            <Link
               href="/tours"
               className="group inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide border-b border-[#2B3D25]/30 pb-0.5 hover:border-[#2B3D25] transition-colors"
             >
@@ -73,79 +138,98 @@ export default function DestinationsSection() {
                 strokeWidth={1.5}
                 className="w-3.5 h-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
               />
-            </a>
+            </Link>
           </div>
         </div>
 
-        {/* Right: Navigation Buttons */}
+        {/* Buttons (Optional since it auto-scrolls, but kept for manual control) */}
         <div className="flex items-center gap-3">
-          <button className="w-10 h-10 rounded-full border border-[#2B3D25]/20 flex items-center justify-center hover:bg-[#2B3D25]/5 transition-colors">
-            <ChevronLeft strokeWidth={1.5} className="w-5 h-5 opacity-70" />
+          <button
+            onClick={() => scroll("left")}
+            className="w-12 h-12 rounded-full border border-[#2B3D25]/20 flex items-center justify-center hover:bg-[#2B3D25]/5 transition-colors active:scale-95 z-10 bg-[#EAE8DF]"
+          >
+            <ChevronLeft strokeWidth={1.5} className="w-6 h-6 opacity-70" />
           </button>
-          <button className="w-10 h-10 rounded-full bg-[#2B3D25] text-[#EAE8DF] flex items-center justify-center hover:bg-opacity-90 transition-colors">
-            <ChevronRight strokeWidth={1.5} className="w-5 h-5" />
+          <button
+            onClick={() => scroll("right")}
+            className="w-12 h-12 rounded-full bg-[#2B3D25] text-[#EAE8DF] flex items-center justify-center hover:bg-opacity-90 transition-colors active:scale-95 z-10"
+          >
+            <ChevronRight strokeWidth={1.5} className="w-6 h-6" />
           </button>
         </div>
       </div>
 
-      {/* --- CARDS GRID / SLIDER --- */}
-      <div className="flex lg:grid lg:grid-cols-4 gap-6 overflow-x-auto pb-8 lg:pb-0 snap-x snap-mandatory w-full max-w-450 mx-auto scrollbar-hide">
-        {destinations.map((item) => (
-          <div
-            key={item.id}
-            className="min-w-[85vw] md:min-w-[45vw] lg:min-w-0 snap-center bg-[#F4F3EF] p-2 rounded-xl flex flex-col group hover:-translate-y-1 transition-all hover:shadow-lg duration-300"
-          >
-            {/* Image Container */}
-            <div className="relative h-60 w-full rounded-xl overflow-hidden bg-[#E6E3D2] mb-5">
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700"
-              />
-
-              {/* Badge */}
-              {item.accessible && (
-                <div className="absolute top-3 right-3 bg-[#DCE1A5] px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm">
-                  {/* Icon added here */}
-                  <Accessibility
-                    strokeWidth={2}
-                    className="w-3 h-3 text-[#2B3D25]"
+      {/* --- INFINITE SLIDER --- */}
+      {/* - 'group' class on parent allows pausing animation on hover
+         - 'scrollbar-hide' removes the visible bar
+         - 'overflow-x-auto' allows manual scrolling via touch/buttons if needed
+      */}
+      <div
+        ref={containerRef}
+        className="w-full overflow-x-auto scrollbar-hide group"
+      >
+        <div className="flex gap-6 animate-infinite-scroll pl-4 md:pl-8">
+          {/* We render the list TWICE to create the seamless loop effect */}
+          {[...destinations, ...destinations, ...destinations].map(
+            (item, index) => (
+              <div
+                key={`${item.id}-${index}`}
+                className="w-[85vw] md:w-[45vw] lg:w-[320px] shrink-0 bg-[#F4F3EF] p-2 rounded-[1.5rem] flex flex-col group/card hover:-translate-y-2 transition-all hover:shadow-xl duration-500"
+              >
+                {/* Image */}
+                <div className="relative h-[280px] w-full rounded-[1.2rem] overflow-hidden bg-[#E6E3D2] mb-5">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover mix-blend-multiply group-hover/card:scale-105 transition-transform duration-700"
                   />
-
-                  <span className="text-[10px] font-bold tracking-wide text-[#2B3D25]">
-                    Wheelchair Accessible
-                  </span>
+                  {item.accessible && (
+                    <div className="absolute top-3 right-3 bg-[#DCE1A5] px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm z-10">
+                      <Accessibility
+                        strokeWidth={2}
+                        className="w-3 h-3 text-[#2B3D25]"
+                      />
+                      <span className="text-[10px] font-bold tracking-wide text-[#2B3D25]">
+                        Wheelchair Accessible
+                      </span>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
 
-            {/* Content */}
-            <div className="flex-1 flex flex-col">
-              {/* Duration */}
-              <div className="flex items-center gap-2 opacity-50 mb-3">
-                <Clock className="w-3.5 h-3.5" />
-                <span className="text-xs font-medium">{item.duration}</span>
+                {/* Content */}
+                <div className="flex-1 flex flex-col px-2 pb-2">
+                  <div className="flex items-center gap-2 opacity-50 mb-3">
+                    <Clock className="w-3.5 h-3.5" />
+                    <span className="text-xs font-medium">{item.duration}</span>
+                  </div>
+
+                  <h3 className="text-xl font-bold leading-tight mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed opacity-60 mb-8 line-clamp-2">
+                    {item.description}
+                  </p>
+
+                  <div className="mt-auto grid grid-cols-2 gap-3">
+                    <Link
+                      href={`/tours/${item.id}`}
+                      className="py-3 rounded-xl border border-[#2B3D25]/20 text-xs font-bold uppercase tracking-wide hover:bg-[#2B3D25]/5 text-[#2B3D25] transition-colors text-center"
+                    >
+                      More Info
+                    </Link>
+                    <button
+                      onClick={() => handleBookClick(item.title)}
+                      className="py-3 rounded-xl bg-[#2B3D25] text-[#EAE8DF] text-xs font-bold uppercase tracking-wide hover:bg-opacity-90 transition-colors"
+                    >
+                      Book
+                    </button>
+                  </div>
+                </div>
               </div>
-
-              {/* Title & Desc */}
-              <h3 className="text-lg font-medium mb-2">{item.title}</h3>
-              <p className="text-sm leading-relaxed opacity-60 mb-8 line-clamp-2">
-                {item.description}
-              </p>
-
-              {/* Action Buttons (Footer) */}
-              <div className="mt-auto grid grid-cols-2 gap-3">
-                <button className="py-2.5 rounded-lg border border-[#2B3D25]/20 text-xs font-bold uppercase tracking-wide hover:bg-[#2B3D25]/5 text-[#2B3D25] transition-colors">
-                  More Info
-                </button>
-                <button className="py-2.5 rounded-lg bg-[#2B3D25] text-[#EAE8DF] text-xs font-bold uppercase tracking-wide hover:bg-opacity-90 transition-colors">
-                  Book
-                </button>
-              </div>
-            </div>
-          </div>
-        ))}
+            )
+          )}
+        </div>
       </div>
     </section>
   );
