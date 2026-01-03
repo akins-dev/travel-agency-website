@@ -4,87 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Clock, Accessibility } from "lucide-react";
 import { useRouter } from "next/navigation";
-
-const allTours = [
-  {
-    id: 1,
-    title: "Athens: Top Sights",
-    image: "/images/athens.png",
-    duration: "5-6 hours",
-    description: "Explore Athens' ancient landmarks and vibrant city center.",
-    accessible: true,
-  },
-  {
-    id: 2,
-    title: "Meteora & Thermopylae",
-    image: "/images/1.jpg",
-    duration: "4-5 hours",
-    description:
-      "Discover breathtaking monasteries and ancient rock formations.",
-    accessible: false,
-  },
-  {
-    id: 3,
-    title: "Corinthos Canal & Argolis",
-    image: "/images/Corinthos.png",
-    duration: "11 hours",
-    description:
-      "Travel back in time on this day tour to the Corinth Canal from Athens.",
-    accessible: true,
-  },
-  {
-    id: 4,
-    title: "Mycenae, Nafplion & Epidavros",
-    image: "/images/Mycenae.png",
-    duration: "10 hours",
-    description: "Discover ancient sites and a charming medieval city.",
-    accessible: false,
-  },
-  {
-    id: 5,
-    title: "Olympia, Corinth Canal & Peristeria",
-    image: "/images/Olympia.png",
-    duration: "5-6 hours",
-    description: "Visit the birthplace of the Olympic Games.",
-    accessible: false,
-  },
-  {
-    id: 6,
-    title: "Delphi, the navel of the Earth",
-    image: "/images/Delphi.png",
-    duration: "5-6 hours",
-    description:
-      "Discover the navel of the earth. UNESCO listed Delphi Archaeological Site.",
-    accessible: true,
-  },
-  {
-    id: 7,
-    title: "Wine, Olive Oil & Cheese",
-    image: "/images/WineOliveCheese.png",
-    duration: "11 hours",
-    description:
-      "Enjoy the authentic flavors of Greek cheese, olive oil and wine.",
-    accessible: false,
-  },
-  {
-    id: 8,
-    title: "Sounion & Vouliagmeni Lake",
-    image: "/images/Sounion.png",
-    duration: "10 hours",
-    description:
-      "Take a trip to the Athens Riviera and visit breathtaking Vouliagmeni Lake.",
-    accessible: true,
-  },
-  {
-    id: 9,
-    title: "Athens, Sounio & Vouliagmeni",
-    image: "/images/AthensSounio.png",
-    duration: "4-5 hours",
-    description:
-      "Experience Athens' top sights, including the Acropolis, Panathenaic Stadium and more.",
-    accessible: true,
-  },
-];
+import { toursData } from "@/data/tours";
 
 export default function ToursGrid() {
   const [filter, setFilter] = useState<"all" | "accessible">("all");
@@ -92,7 +12,7 @@ export default function ToursGrid() {
 
   // Filter Logic
   const filteredTours =
-    filter === "all" ? allTours : allTours.filter((tour) => tour.accessible);
+    filter === "all" ? toursData : toursData.filter((tour) => tour.accessible);
 
   const redirectToDetailsPage = () => {
     router.push("/tours/1");

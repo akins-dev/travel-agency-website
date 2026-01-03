@@ -12,51 +12,10 @@ import {
   Accessibility,
 } from "lucide-react";
 import BookTourModal from "@/components/BookTourModal";
+import { toursData } from "@/data/tours";
 
 // --- DATA ---
-const destinations = [
-  {
-    id: 1,
-    title: "Athens: Top Sights",
-    image: "/images/athens.png",
-    duration: "5-6 hours",
-    description: "Explore Athens' ancient landmarks and vibrant city center.",
-    accessible: true,
-  },
-  {
-    id: 2,
-    title: "Corinthos Canal & Argolis",
-    image: "/images/Corinthos.png",
-    duration: "11 hours",
-    description: "Travel back in time on this day tour to the Corinth Canal.",
-    accessible: true,
-  },
-  {
-    id: 3,
-    title: "Sounion & Vouliagmeni Lake",
-    image: "/images/Sounion.png",
-    duration: "4-5 hours",
-    description: "Visit the Athens Riviera and breathtaking Vouliagmeni Lake.",
-    accessible: true,
-  },
-  {
-    id: 4,
-    title: "Meteora & Thermopylae",
-    image: "/images/1.jpg",
-    duration: "4-5 hours",
-    description:
-      "Discover breathtaking monasteries and ancient rock formations.",
-    accessible: false,
-  },
-  {
-    id: 5,
-    title: "Mycenae & Epidaurus",
-    image: "/images/Mycenae.png",
-    duration: "10 hours",
-    description: "Visit the kingdom of Agamemnon and the ancient theater.",
-    accessible: false,
-  },
-];
+const destinations = toursData.slice(0, 5);
 
 export default function DestinationsSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -220,7 +179,7 @@ export default function DestinationsSection() {
                     </Link>
                     <button
                       onClick={() => handleBookClick(item.title)}
-                      className="py-3 rounded-xl bg-[#2B3D25] text-[#EAE8DF] text-xs font-bold uppercase tracking-wide hover:bg-opacity-90 transition-colors"
+                      className="py-3 rounded-xl bg-[#2B3D25] text-[#EAE8DF] cursor-pointer text-xs font-bold uppercase tracking-wide hover:bg-opacity-90 transition-colors"
                     >
                       Book
                     </button>
