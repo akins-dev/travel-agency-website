@@ -2,13 +2,22 @@
 
 import { Globe, ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
+import BookTourModal from "./BookTourModal";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
       <header className="w-full relative z-50 pt-6">
+        {/* MODAL COMPONENT */}
+        <BookTourModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          tourTitle="General Inquiry" // Changed to generic title since this is the Navbar
+        />
+
         <div className="flex justify-between items-center w-full">
           {/* LEFT: Logo & Language Selector */}
           <div className="flex items-center gap-4">
@@ -50,7 +59,11 @@ export default function Navbar() {
 
           {/* RIGHT: Action Area */}
           <div className="flex items-center gap-4">
-            <button className="hidden lg:block bg-[#2B3D25] text-[#E9E7DE] px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-all">
+            {/* DESKTOP BOOK BUTTON - ADDED ONCLICK HERE */}
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="hidden lg:block bg-[#2B3D25] cursor-pointer text-[#E9E7DE] px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-all"
+            >
               Book a Tour
             </button>
 
@@ -90,7 +103,14 @@ export default function Navbar() {
               </li>
             ))}
             <li className="mt-8">
-              <button className="bg-[#2B3D25] text-[#E9E7DE] px-8 py-3 rounded-lg text-base">
+              {/* MOBILE BOOK BUTTON - ALREADY HAD ONCLICK */}
+              <button
+                onClick={() => {
+                  setIsModalOpen(true);
+                  setIsMobileMenuOpen(false); // Close menu when opening modal
+                }}
+                className="bg-[#2B3D25] text-[#E9E7DE] cursor-pointer px-8 py-3 rounded-lg text-base"
+              >
                 Book a Tour
               </button>
             </li>
