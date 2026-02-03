@@ -7,7 +7,7 @@ export default function CtaBanner() {
       <div className="relative w-full max-w-450 mx-auto h-125 md:h-150 rounded-xl lg:rounded-3xl overflow-hidden group">
         {/* Background Image */}
         <Image
-          src="/images/image.png "
+          src="/images/banner.png "
           alt="Meteora Landscape"
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-[2s] ease-out"
